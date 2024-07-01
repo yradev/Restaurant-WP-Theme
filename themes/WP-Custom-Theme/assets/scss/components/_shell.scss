@@ -1,0 +1,34 @@
+
+/* ------------------------------------------------------------ *\
+	Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+	--shell-width : #{$shell-max-width};
+
+	max-width: calc(var(--shell-width) + $shell-padding-desktop * 2);
+	padding-inline: $shell-padding-desktop;
+	margin: 0 auto;
+	width: 100%;
+
+
+	@include responsive-down(mobile) {
+		padding-inline: $shell-padding-tablet;
+	}
+
+	@include responsive-down(mobile) {
+		padding-inline: $shell-padding-mobile;
+	}
+}
+
+/* Shell Fluid */
+
+.shell--fluid {
+	max-width: none;
+}
+
+/*  shell--large  */
+
+.shell-large {
+	max-width: 1800px + $shell-padding-desktop * 2;
+}

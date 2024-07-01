@@ -1,0 +1,53 @@
+$t-duration : 0.4s;
+
+//fonts
+
+$fs-desktop		: 20px;
+$fs-tablet		: 18px;
+$fs-mobile      : 16px;
+$fw-base		: 400;
+$lh-desktop		: 1.5;
+$lh-tablet		: 1.4;
+$lh-mobile      : 1.3;
+$ff-base		: 'Roboto', Helvetica, Arial, sans-serif;
+$ff-alt			: 'Lora', Georgia, ' Times New Roman', Times, serif;
+
+// Shell
+
+$shell-max-width			: 1650px;
+$shell-padding-desktop		: 50px;
+$shell-padding-tablet		: 50px;
+$shell-padding-mobile		: 25px;
+
+
+// Default space between sections
+$margin-desktop : 100px;
+$margin-large-desktop : 90px;
+$margin-small-desktop : 80px;
+$margin-tablet : 70px;
+$margin-mobile : 60px;
+
+$padding-desktop : 100px;
+$padding-large-desktop : 100px;
+$padding-small-desktop : 80px;
+$padding-tablet : 70px;
+$padding-mobile : 60px;
+
+// Colors
+
+$c-black                    : #000;
+$c-white                    : #fff;
+$c-light                    : #f7f7f7;
+$c-orange					: #ff9100;
+$c-silver					: #c0c0c0;
+$c-dark                     : #2d2727;
+$c-green                    : #00ff37;
+$c-dark-green               : #037900;
+$c-bg                       : #dfdddd;
+
+// Responsive
+
+$r-mobile			: 767px;
+$r-tablet			: 1023px;
+$r-small-desktop	: 1199px;
+$r-large-desktop	: 1399px;

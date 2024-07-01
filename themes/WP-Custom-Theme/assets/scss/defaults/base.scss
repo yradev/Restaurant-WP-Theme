@@ -1,0 +1,107 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html, body {
+	margin: 0 !important;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	text-size-adjust: none;
+	min-width: 320px;
+	font-family: $ff-base;
+	font-size: $fs-desktop;
+	font-weight: $fw-base;
+	line-height: $lh-desktop;
+	background: linear-gradient(90deg, rgba(200,200,200,1) 0%, rgba(221,221,221,1) 45%, rgba(222,222,222,1) 100%);
+	color: $c-black;
+
+	@include responsive-down($r-tablet) {
+		font-size: $fs-tablet;
+		line-height: $lh-tablet;
+	}
+
+	@include responsive-down($r-mobile) {
+		font-size: $fs-mobile;
+		line-height: $lh-mobile;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $ff-alt;
+	font-weight: 700;
+}
+
+h1,
+.h1 {
+	font-size: 76px;
+}
+
+h2,
+.h2 {
+	font-size: 54px;
+}
+
+h3
+.h3 {
+	font-size: 28px;
+}
+
+h4,
+.h4 {
+	font-size: 22px;
+}
+
+h5,
+.h5 {
+	font-size: 20px;
+}
+
+h6,
+.h6 {
+	font-size: 18px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	transition: opacity $t-duration;
+
+	&:hover {
+		opacity: .7;
+	}
+}
+
+img,
+iframe {
+	display: block;
+	width: 100%;	
+	height: auto; 
+}
+

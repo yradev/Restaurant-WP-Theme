@@ -1,0 +1,52 @@
+@mixin responsive-down($name) {
+	@media (max-width: $name) {
+		@content;
+	}
+}
+
+@mixin responsive-up($name) {
+	@media (min-width: $name) {
+		@content;
+	}
+}
+
+@mixin default-margin {
+	margin: $margin-desktop 0;
+
+	@include responsive-down($r-large-desktop) {
+		margin: $margin-desktop 0;
+	}
+
+	@include responsive-down($r-small-desktop) {
+		margin: $margin-small-desktop 0;
+	}
+	
+	@include responsive-down($r-tablet) {
+		margin: $margin-tablet 0;
+	}
+
+	@include responsive-down($r-mobile) {
+		margin: $margin-mobile 0;
+	}
+}
+
+@mixin default-padding {
+	padding: $padding-desktop 0;
+
+	@include responsive-down($r-large-desktop) {
+		padding: $padding-desktop 0;
+	}
+
+	@include responsive-down($r-small-desktop) {
+		padding: $padding-small-desktop 0;
+	}
+	
+	@include responsive-down($r-tablet) {
+		padding: $padding-tablet 0;
+	}
+
+	@include responsive-down($r-mobile) {
+		padding: $padding-mobile 0;
+	}
+}
+
