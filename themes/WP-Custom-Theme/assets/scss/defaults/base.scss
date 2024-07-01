@@ -49,38 +49,44 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: $ff-alt;
-	font-weight: 700;
+	font-family: $ff;
+	font-weight: 600;
 }
 
 h1,
 .h1 {
-	font-size: 76px;
+	font-size: 50px;
+	line-height: 1.5;
 }
 
 h2,
 .h2 {
-	font-size: 54px;
+	font-size: 36px;
+	line-height: 1.55;
 }
 
 h3
 .h3 {
 	font-size: 28px;
+	line-height: 1.5;
 }
 
 h4,
 .h4 {
 	font-size: 22px;
+	line-height: 1.5;
 }
 
 h5,
 .h5 {
-	font-size: 20px;
+	font-size: 24px;
+	line-height: 1.5;
 }
 
 h6,
 .h6 {
-	font-size: 18px;
+	font-size: 20px;
+	line-height: 1.08;
 }
 
 ul {
