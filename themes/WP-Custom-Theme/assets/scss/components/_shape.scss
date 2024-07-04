@@ -1,0 +1,19 @@
+//------------------------------------------------------------ 
+//	
+//------------------------------------------------------------
+
+.shape {
+	width: 212px;
+	height: 112px;
+
+	@include responsive-down($r-tablet) {
+		width: 114px;
+		height: 60px;
+	}
+}
+
+.shape svg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

@@ -4,17 +4,17 @@ $t-duration : 0.4s;
 
 $fs-desktop		: 20px;
 $fs-tablet		: 18px;
-$fs-mobile      : 16px;
+$fs-mobile		 : 16px;
 $fw-base		: 400;
 $lh-desktop		: 1.5;
 $lh-tablet		: 1.4;
-$lh-mobile      : 1.3;
-$ff-base		: "Poppins", 'Roboto', Helvetica, Arial, sans-serif;
-$ff-alt			: "Dancing Script", cursive;
+$lh-mobile : 1.3;
+$ff-base		: "Poppins", 'Montserrat', 'Roboto', Helvetica, Arial, sans-serif;
+$ff-alt			: "Dancing Script", 'Great Vibes', cursive;
 
 // Shell
 
-$shell-max-width			: 11700px;
+$shell-max-width			: 1170px;
 $shell-padding-desktop		: 40px;
 $shell-padding-tablet		: 30px;
 $shell-padding-mobile		: 20px;
@@ -35,8 +35,11 @@ $padding-mobile : 60px;
 
 // Colors
 
-$c-black                    : #000;
-$c-white                    : #fff;
+$c-black 			: #000;
+$c-white			: #fff;
+$c-dark				: #0B0E11;
+$c-beige			: #D7B686;
+$c-light-beige		: #E3C08D;
 
 // Responsive
 

@@ -8,7 +8,6 @@
 <body <?php body_class(); ?>>
 <div class="wrapper">
     <header class="header">
-        <h1>Header</h1>        
     </header><!-- /.header -->
 
     <main class="main">

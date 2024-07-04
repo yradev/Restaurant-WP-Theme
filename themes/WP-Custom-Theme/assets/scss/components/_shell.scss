@@ -11,12 +11,11 @@
 	margin: 0 auto;
 	width: 100%;
 
-
-	@include responsive-down(mobile) {
+	@include responsive-down($r-tablet) {
 		padding-inline: $shell-padding-tablet;
 	}
 
-	@include responsive-down(mobile) {
+	@include responsive-down($r-mobile) {
 		padding-inline: $shell-padding-mobile;
 	}
 }

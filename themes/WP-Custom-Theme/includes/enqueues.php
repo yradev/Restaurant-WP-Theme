@@ -2,17 +2,17 @@
 /**
  * Add custom scripts
  */
- add_action( 'wp_enqueue_scripts', 'add_custom_script' , 0 , 1000);
- function add_custom_script() {
+ add_action( 'wp_enqueue_scripts', 'ct_enqueue_script' , 0 , 1000);
+ function ct_enqueue_script() {
 	wp_enqueue_script("jquery");
  }
 
 
- add_action( 'wp_enqueue_scripts', 'add_enqueues_from_dist' , 0 , 10);
+ add_action( 'wp_enqueue_scripts', 'ct_enqueues_from_dist' , 0 , 10);
 /**
  * Add enqueues from dist folder to WP
  */
-function add_enqueues_from_dist() {
+function ct_enqueues_from_dist() {
 	$manifest_path =  get_template_directory() . DIST_PATH . MANIFEST_PATH;
 	$template_dist_path = get_template_directory_uri() . DIST_PATH;
 
