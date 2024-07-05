@@ -1,2 +1,4 @@
 import AOS from 'aos';
-AOS.init();
+AOS.init({
+	duration: 1200
+});

@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { watchAndRun } from 'vite-plugin-watch-and-run'
 import ViteSassGlobImport from 'vite-plugin-sass-glob-import';
 import liveReload from 'vite-plugin-live-reload'
 

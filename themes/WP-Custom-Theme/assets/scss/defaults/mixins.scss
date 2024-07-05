@@ -14,7 +14,7 @@
 	margin: $margin-desktop 0;
 
 	@include responsive-down($r-large-desktop) {
-		margin: $margin-desktop 0;
+		margin: $margin-large-desktop 0;
 	}
 
 	@include responsive-down($r-small-desktop) {
