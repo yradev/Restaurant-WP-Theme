@@ -1,0 +1,126 @@
+//------------------------------------------------------------ 
+//	Nav
+//------------------------------------------------------------
+
+.nav {
+	@include responsive-down($r-tablet) {
+		width: 100%;
+		display: grid;
+		grid-template-rows: 0fr;
+		overflow: hidden;
+		transition: grid-template-rows 1s;
+		margin-top: 20px;
+	}
+
+	.menu {
+		display: flex;
+		gap: 40px;
+
+		@include responsive-down($r-small-desktop) {
+			gap: 20px;
+		}
+
+		@include responsive-down($r-tablet) {
+			display: grid;
+			min-height: 0;
+			gap: 5px;
+		}
+	}
+
+	.menu li a {
+		display: block;
+		font-size: 16px;
+		line-height: 1.5;
+		color: $c-light;
+	}
+
+	.menu li {
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 2px;
+			left: 50%;
+			transform: translateX(-50%);
+			top: calc(100% + 10px);
+			background-color: $c-beige;
+			display: none;
+		}
+	}
+
+	.menu li.current-menu-item {
+		color:$c-white;
+
+		&:after {
+			display: block;
+
+			@include responsive-down($r-tablet) {
+				display: none;
+			}
+		}
+	}
+
+	.menu li.current-menu-item a {
+		color:$c-white;
+	}
+
+	.sub-menu {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 140px;
+		padding: 5px 10px;
+		border-radius: 0 0 10px 10px;
+		background-color: rgba($c-black, .4);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity $t-duration;
+
+		@include responsive-down($r-tablet) {
+			position: static;
+			opacity: 1;
+			pointer-events: auto;
+			padding: 0 0 0 20px;
+			width: auto;
+			display: none;
+		}
+	}
+
+	.menu li.menu-item-has-children {
+		&:hover {
+			.sub-menu {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	.menu li.menu-item-has-children a {
+		@include responsive-down($r-tablet) {
+			pointer-events: none;
+		}
+	}
+
+	.menu li.menu-item-has-children.is-active a {
+		pointer-events: auto;
+	}
+	
+	.menu li.is-active {
+		.sub-menu {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	.sub-menu li a {
+		padding: 2px 0;
+	}
+}
+
+body.has-open-menu .nav {
+		@include responsive-down($r-tablet) {
+			grid-template-rows: 1fr;
+		}
+}
