@@ -61,7 +61,6 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		padding-block: 50px;
 		opacity: 0;
 		padding: 80px 0;
 		transition: opacity 1s;
@@ -72,6 +71,10 @@
 
 		@include responsive-down($r-tablet) {
 			min-height: 700px;
+		}
+
+		@include responsive-down($r-mobile) {
+			padding: 80px 10px;
 		}
 	}
 

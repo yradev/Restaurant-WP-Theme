@@ -1,0 +1,44 @@
+//------------------------------------------------------------ 
+//	Counter
+//------------------------------------------------------------
+
+.counter {
+	text-align: center;
+
+	h3 {
+		font-size: 54px;
+		line-height: 1.5;
+		font-weight: 600;
+		color: $c-light-beige;
+		margin-bottom: 0;
+
+		@include responsive-down($r-small-desktop) {
+			font-size: 50px;
+		}
+
+		@include responsive-down($r-tablet) {
+			font-size: 45px;
+		}
+
+		@include responsive-down($r-mobile) {
+			font-size: 40px;
+		}
+	}
+
+	p {
+		font-size: 20px;
+		line-height: 1.5;
+
+		@include responsive-down($r-small-desktop) {
+			font-size: 18px;
+		}
+
+		@include responsive-down($r-tablet) {
+			font-size: 16px;
+		}
+
+		@include responsive-down($r-mobile) {
+			font-size: 16px;
+		}
+	}
+}
