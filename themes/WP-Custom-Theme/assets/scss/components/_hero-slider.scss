@@ -66,6 +66,10 @@
 		padding: 80px 0;
 		transition: opacity 1s;
 
+		@include responsive-down($r-small-desktop) {
+			padding: 50px 10px;
+		}
+
 		@include responsive-down($r-tablet) {
 			min-height: 700px;
 		}

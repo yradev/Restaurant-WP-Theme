@@ -4,7 +4,7 @@
 
 .feature {
 	background-color: $c-dark-green;
-	padding: 40px 75px 40px 45px;
+	padding: 34px 40px;
 	display: flex;
 	gap: 20px;
 
@@ -13,7 +13,7 @@
 	}
 
 	@include responsive-down($r-tablet) {
-		gap: 10px;
+		gap: 15px;
 		padding: 30px 20px;
 	}
 
@@ -42,7 +42,7 @@
 	}
 
 	i {
-		font-size: 60px;
+		font-size: 55px;
 		color: $c-light-beige;
 
 		@include responsive-down($r-small-desktop) {

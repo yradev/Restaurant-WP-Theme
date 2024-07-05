@@ -1,0 +1,128 @@
+//------------------------------------------------------------ 
+//	Section two images content
+//------------------------------------------------------------
+
+.section-two-images-content {
+	@include default-padding;
+	background-color: $c-dark-green-v2;
+
+	.section__inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.section__images {
+		width: 61.2%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 23px;
+
+		@include responsive-down($r-tablet) {
+			grid-template-columns: 1fr;
+		}
+
+		@include responsive-down($r-mobile) {
+			width: 100%;
+			margin-bottom: 30px;
+			gap: 20px;
+		}
+	}
+
+	.section__images img {
+		width: 100%;
+		height: 572px;
+		object-fit: cover;
+
+		@include responsive-down($r-large-desktop) {
+			height: 500px;
+		}
+
+		@include responsive-down($r-tablet) {
+			height: 300px;
+		}
+
+		&:nth-child(1) {
+			margin-top: 56px;
+			clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%, 0% 50%);
+
+			@include responsive-down($r-mobile) {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-child(2) {
+			clip-path: polygon(0 0, 100% 0, 100% 51%, 100% 100%, 10% 100%, 0 90%);
+		}
+	}
+
+	.section__content {
+		width: calc(38.8% + 120px);
+		margin-left: -120px;
+		position: relative;
+		z-index: 1;
+		align-self: center;
+		padding: 40px 30px;
+		background-color: $c-white;
+		box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+		clip-path: polygon(0 0, 90% 0, 100% 20%, 100% 100%, 0 100%, 0% 50%);
+
+		@include responsive-down($r-large-desktop) {
+			padding: 30px;
+		}
+
+		@include responsive-down($r-large-desktop) {
+			margin-left: -100px;
+			width: calc(38.8% + 100px);
+		}
+
+		@include responsive-down($r-mobile) {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.section__content .section__subtitle {
+		font-family: $ff-alt;
+		font-size: 36px;
+		line-height: 1.1944;
+		font-weight: 700;
+		color: $c-light-beige;
+		margin-bottom: 20px;
+
+		@include responsive-down($r-large-desktop) {
+			margin-bottom: 10px;
+			font-size: 32px;
+		}
+
+		&:last-chid {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__content h2 {
+		color: $c-black;
+		margin-bottom: 30px;
+
+		@include responsive-down($r-large-desktop) {
+			margin-bottom: 10px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__content .section__entry {
+		color: $c-silver;
+		font-size: 16px;
+		line-height: 1.625;
+		
+		@include responsive-down($r-small-desktop) {
+			font-size: 16px;
+		}
+
+		@include responsive-down($r-tablet) {
+			font-size: 14px;
+		}
+	}
+}
