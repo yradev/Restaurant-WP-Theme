@@ -21,8 +21,6 @@ function ct_register_taxonomies() {
 		],
 		
 	);
-
-    register_taxonomy_for_object_type('ct_item_category', 'ct_item');
 }
 
 

@@ -147,3 +147,8 @@ iframe {
 	height: auto; 
 }
 
+#wpadminbar {
+	@include responsive-down($r-tablet) {
+		position: fixed;
+	}
+}
