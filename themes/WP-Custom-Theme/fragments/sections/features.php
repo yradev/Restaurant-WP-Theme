@@ -1,4 +1,4 @@
-<section class="section-features" id="<?php echo $anchor ?>" data-aos="fade-up">
+<section class="section-features" data-aos="fade-up">
 	<div class="shape section__shape">
 		<?php ct_include_fragment( 'svgs/shape', [] ) ?>
 	</div><!-- /.shape -->

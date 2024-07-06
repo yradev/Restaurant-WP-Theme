@@ -1,4 +1,4 @@
-<section class="hero-large">
+<section class="hero-large js-hero-large">
 	<?php if( ! empty( $slides ) ) :?>
 		<div class="hero-slider js-hero-slider">
 			<div class="slider__clip swiper">
@@ -82,10 +82,7 @@
 		</div><!-- /.slider js-slider -->
 	<?php endif ?>
 
-	<?php if( ! empty( $next_section ) ) :?>
-		<a href="<?php echo $next_section ?>" class="hero__btn">
+		<a href="#first-section" class="hero__btn">
 			<i class="fa-solid fa-angles-down"></i>
 		</a>
-	<?php endif ?>
-
 </section><!-- /.hero-large -->

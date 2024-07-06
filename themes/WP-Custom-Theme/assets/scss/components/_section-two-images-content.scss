@@ -45,7 +45,7 @@
 			margin-top: 56px;
 			clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%, 0% 50%);
 
-			@include responsive-down($r-mobile) {
+			@include responsive-down($r-tablet) {
 				margin-top: 0;
 			}
 		}

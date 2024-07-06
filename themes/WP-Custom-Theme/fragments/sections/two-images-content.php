@@ -1,4 +1,4 @@
-<section class="section-two-images-content" id="<?php echo $anchor ?>" data-aos="fade-up">
+<section class="section-two-images-content" data-aos="fade-up">
 	<div class="shell">
 		<div class="section__inner">
 			<div class="section__images">

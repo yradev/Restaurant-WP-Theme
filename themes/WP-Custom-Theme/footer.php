@@ -23,7 +23,7 @@
                         <ul class="socials">
                             <?php foreach( $socials as $social ) :?>
                                 <li class="social">
-                                    <a href="<?php echo $social['link'] ?>">
+                                    <a href="<?php echo $social['link'] ?>" target="_blank">
                                         <?php echo $social['icon'] ?>
                                     </a>
                                 </li>
@@ -34,7 +34,7 @@
 
                 <div class="footer__links">
                     <div class="footer__nav">
-                        <h5> <?php _e('Menu', 'ct') ?> </h5>
+                        <h5> <?php _e('Меню', 'ct') ?> </h5>
                         
                         <?php wp_nav_menu( [
                             'theme_location' => 'header_menu',
@@ -44,13 +44,13 @@
                     </div><!-- /.footer__nav -->
                    
                     <div class="footer__contacts">
-                        <h5> <?php _e('Find Us', 'ct') ?> </h5>
+                        <h5> <?php _e('Намери ни', 'ct') ?> </h5>
 
                         <?php if( ! empty( $contacts ) ) :?>
                             <ul class="contacts">
                                 <?php foreach( $contacts as $contact ) :?>
                                     <li class="contact">
-                                        <a href="<?php echo ct_get_contact_link($contact['contact']) ?>"> 
+                                        <a href="<?php echo ct_get_contact_link($contact['contact']) ?>" target="_blank"> 
                                             <strong>
                                                 <?php 
                                                     $regex = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/'; 
