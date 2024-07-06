@@ -4,6 +4,7 @@
         $content = get_field( 'ct_footer_content' , 'option' );
         $socials = get_field ( 'ct_socials' , 'option' );
         $contacts = get_field ( 'ct_contacts' , 'option' );
+        wp_footer();
     ?>
     <footer class="footer">
         <div class="shell">

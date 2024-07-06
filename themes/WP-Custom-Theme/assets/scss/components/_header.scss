@@ -28,3 +28,15 @@
 body.has-open-menu .header {
 	background-color: $c-black;
 }
+
+/* 
+* Have fixed header
+*/
+
+body.admin-bar .header {
+	margin-top: 32px;
+
+	@include responsive-down($r-tablet) {
+		margin-top: 46px;
+	}
+}
