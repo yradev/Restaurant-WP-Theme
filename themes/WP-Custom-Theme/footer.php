@@ -6,6 +6,7 @@
         $contacts = get_field ( 'ct_contacts' , 'option' );
         wp_footer();
     ?>
+    
     <footer class="footer">
         <div class="shell">
             <div class="footer__inner">
