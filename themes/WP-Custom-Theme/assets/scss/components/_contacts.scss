@@ -1,0 +1,15 @@
+//------------------------------------------------------------ 
+//	Contacts
+//------------------------------------------------------------
+
+.contacts {
+	max-width: 277px;
+
+	@include responsive-down($r-tablet) {
+		max-width: 200px;
+	}
+
+	@include responsive-down($r-mobile) {
+		max-width: unset;
+	}
+}

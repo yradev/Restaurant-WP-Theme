@@ -1,0 +1,11 @@
+//------------------------------------------------------------ 
+//	Socials
+//------------------------------------------------------------
+
+.socials {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(8, auto);
+	justify-content: flex-start;
+	gap: 20px;
+}
