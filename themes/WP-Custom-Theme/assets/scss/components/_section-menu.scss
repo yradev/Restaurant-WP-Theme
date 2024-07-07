@@ -4,7 +4,8 @@
 
 .section-menu {
 	@include default_margin();
-	
+	position: relative;
+
 	.section__inner {
 		display: flex;
 		flex-wrap: wrap;
@@ -15,7 +16,7 @@
 		position: relative;
 		z-index: 1;
 		background-color: $c-white;
-		padding: 50px 40px;
+		padding: 40px;
 		margin-right: -118px;
 		margin-top: 80px;
 		width: calc(27.78% + 118px);
@@ -49,7 +50,7 @@
 		line-height: 1.2;
 		font-weight: 700;
 		color: $c-light-beige;
-		margin-bottom: 40px;
+		margin-bottom: 30px;
 
 		@include responsive-down($r-large-desktop) {
 			margin-bottom: 20px;
@@ -69,6 +70,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 30px;
+		position: relative;
 
 		@include responsive-down($r-large-desktop) {
 			gap: 20px;
@@ -83,12 +85,12 @@
 		}
 	}
 
-	.section__content ul li {
+	.section__content .section__menu ul li {
 		color: $c-black;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 
 		@include responsive-down($r-large-desktop) {
 			margin-bottom: 20px;
@@ -100,6 +102,27 @@
 	}
 
 	.section__content h4 {
+		font-family: $ff-alt;
+		font-size: 30px;
+		line-height: 1.2;
+		font-weight: 700;
+		color: $c-light-beige;
+		margin-bottom: 34px;
+
+		@include responsive-down($r-large-desktop) {
+			margin-bottom: 20px;
+		}
+
+		@include responsive-down($r-tablet) {
+			font-size: 28px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__content h5 {
 		font-size: 20px;
 		line-height: 1.5;
 		color: $c-black;
@@ -134,6 +157,7 @@
 			width: 100%;
 			height: 340px;
 			object-fit: cover;
+			object-position: top;
 			margin-bottom: 30px;
 
 			@include responsive-down($r-large-desktop) {
@@ -143,10 +167,18 @@
 
 			&:nth-child(1) {
 				clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%, 0% 50%);
+
+				@include responsive-down($r-mobile) {
+					clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 20%);
+				}
 			}
 
 			&:nth-child(2) {
 				clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0% 50%);
+				
+				@include responsive-down($r-mobile) {
+					clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%, 0 20%);
+				}
 			}
 
 			&:last-child {
@@ -164,6 +196,7 @@
 		width: 100%;
 		height: 500px;
 		object-fit: cover;
+		object-position: top;
 		clip-path: polygon(20% 0, 100% 0, 100% 47%, 100% 100%, 0 100%, 0 20%);
 
 		@include responsive-down($r-tablet) {
@@ -171,7 +204,210 @@
 		}
 
 		@include responsive-down($r-mobile) {
-			height: 300px;
+			display: none;
 		}
 	}
+
+	.section__shape {
+		position: absolute;
+		right: 40%;
+		top: 40%;
+		z-index: 1;
+		transform: rotate(-135deg);
+
+		@include responsive-down($r-tablet) {
+			top: 45%;
+		}
+	}	
 }
+
+	//  Type 2 
+.section-menu--type-2 {
+	.section__inner {
+		flex-direction: row-reverse;
+	}
+
+	.section__content {
+		margin: 50px 0 0 -30px;
+		width: calc(35.28% + 30px);
+	
+		@include responsive-down($r-mobile) {
+			margin: 0 0 30px;
+		}
+
+		@include responsive-down($r-mobile) {
+			width: 100%;
+		}
+	}
+
+	.section__two-images {
+		display: grid;
+		grid-template-columns: 256px 1fr;
+		padding-left: 126px;
+		gap: 30px;
+		align-items: flex-end;
+
+		@include responsive-down($r-tablet) {
+			padding-left: 0;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include responsive-down($r-mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.section__two-images img {
+		margin-bottom: 0;
+		height: 274px;
+
+		&:nth-child(1) {
+			height: 226px;
+			clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0% 50%);
+
+			@include responsive-down($r-mobile) {
+				clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 20%);
+			}
+		}
+
+		&:nth-child(2) {
+			clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%, 0% 50%);
+
+			@include responsive-down($r-mobile) {
+				clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%, 0 20%);
+			}
+		}
+	}
+
+	.section__images {
+		grid-template-columns: 1fr;
+		width: 64.72%;
+
+		@include responsive-down($r-mobile) {
+			width: 100%;
+		}
+	}
+
+	.section__image {
+		height: 352px;
+		clip-path: polygon(20% 0, 100% 0, 100% 21%, 100% 100%, 0 100%, 0 20%);
+
+		@include responsive-down($r-tablet) {
+			height: 300px;
+		}
+
+		@include responsive-down($r-mobile) {
+			display: none;
+		}
+	}
+
+	.section__shape {
+		right: 34%;
+		top: 34%;
+	}
+}
+
+//  Type 3
+.section-menu--type-3 {
+	.section__images {
+		grid-template-columns: 1fr;
+	}
+
+	.section__two-images {
+		display: grid;
+		grid-template-columns: 343px 1fr;
+		gap: 30px;
+
+		@include responsive-down($r-tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include responsive-down($r-mobile) {
+			grid-template-columns: 1fr;
+		}
+	
+	}
+
+	.section__two-images img {
+		height: 310px;
+
+		&:nth-child(1) {
+			height: 252px;
+			clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 0);
+
+			@include responsive-down($r-mobile) {
+				clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%, 0 20%);
+			}
+		}
+
+		&:nth-child(2) {
+			clip-path: polygon(10% 0, 100% 0, 100% 53%, 100% 100%, 0 100%, 0 10%);
+
+			@include responsive-down($r-mobile) {
+				clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%, 0 20%);
+			}
+		}
+	}
+
+	.section__image {
+		order: -1;
+	}
+
+	.section__image img {
+		height: 323px;
+		clip-path: polygon(10% 0, 90% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+	}
+}
+
+//  Section menu type 4
+
+.section-menu--type-4 {
+	.section__images {
+		display: none;
+	}
+
+	.section__inner {
+		display: block;
+	}
+
+	.section__content {
+		margin: 0;
+		width: 100%;
+		padding: 0;
+	}
+
+	.section__menus {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.section__menu {
+		padding: 30px;
+		position: relative;
+		width: 25%;
+
+		@include responsive-down($r-small-desktop) {
+			width: 50%;
+			padding: 20px;
+		}
+
+		@include responsive-down($r-mobile) {
+			width: 100%;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background-color: rgba($c-black, .1);
+		}
+	}
+
+	.section__menu h4{
+		text-align: center;
+	}
+}
+

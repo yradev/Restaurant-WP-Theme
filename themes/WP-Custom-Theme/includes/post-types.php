@@ -11,7 +11,7 @@ function create_post_type() {
             'exclude_from_search' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'items'),
-            'show_in_rest' => true,
+            'show_in_rest' => false,
             'show_ui'           => true,
 			'menu_icon' => 'dashicons-category',
             'supports' => [ 'title', 'excerpt', 'thumbnail', 'editor' ],
