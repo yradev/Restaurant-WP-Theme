@@ -20,14 +20,19 @@ $type_modificator = [
 	'type-4' => 'section-menu--type-4',
 ];
 
+$cols = [
+	'four' => '',
+	'three' => 'section-menu--three-cols',
+	'two' => 'section-menu--two-cols'
+];
+
 
 if( count($terms) == 0 ) {
 	$terms[] = $term;
 }
 
 ?>
-
-<section class="section-menu <?php echo $type_modificator[$type] ?>" data-aos="fade-in">
+<section class="section-menu <?php echo $type_modificator[$type] ?> <?php echo $type == 'type-4' ? $cols[$columns] : '' ?>" data-aos="fade-in">
 	<div class="shell">
 		<div class="section__inner">
 			<div class="section__content" data-aos="fade-right">
