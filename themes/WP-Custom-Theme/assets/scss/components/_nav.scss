@@ -50,7 +50,7 @@
 		}
 	}
 
-	.menu li.current-menu-item {
+	.menu li.current-menu-item:not(.anchor-link) {
 		color:$c-white;
 
 		&:after {
@@ -62,7 +62,7 @@
 		}
 	}
 
-	.menu li.current-menu-item a {
+	.menu li.current-menu-item:not(.anchor-link) a {
 		color:$c-white;
 	}
 

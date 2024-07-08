@@ -26,6 +26,15 @@
 	.section__content {
 		width: 55.3%;
 		padding-right: 20px;
+
+		@include responsive-down($r-tablet) {
+			width: 50%;
+		}
+
+		@include responsive-down($r-mobile) {
+			width: 100%;
+			margin-bottom: 25px;
+		}
 	}
 
 	.section__content-inner {
@@ -34,6 +43,42 @@
 
 	.section__form {
 		width: 44.7%;
+		padding: 50px 60px;
+		background: linear-gradient(120.78deg, #E1BE8B -5.03%, #EAB76E 109.74%);
+
+		@include responsive-down($r-small-desktop) {
+			padding: 40px;
+		}
+
+		@include responsive-down($r-tablet) {
+			width: 50%;
+			padding: 40px 20px;
+		}
+
+		@include responsive-down($r-mobile) {
+			width: 100%;
+		}
+	}
+
+	.section__form h3 {
+		text-align: center;
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 1.2;
+		margin-bottom: 40px;
+
+		@include responsive-down($r-small-desktop) {
+			margin-bottom: 30px;
+		}
+
+		@include responsive-down($r-mobile) {
+			margin-bottom: 20px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 	}
 
 	.section__subtitle {
@@ -44,6 +89,10 @@
 		color: $c-light-beige;
 		margin-bottom: 20px;
 
+		@include responsive-down($r-tablet) {
+			margin-bottom: 10px;
+		}
+
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -51,6 +100,10 @@
 
 	.section__content h2 {
 		margin-bottom: 24px;
+
+		@include responsive-down($r-tablet) {
+			margin-bottom: 10px;
+		}
 
 		&:last-child {
 			margin-bottom: 0;

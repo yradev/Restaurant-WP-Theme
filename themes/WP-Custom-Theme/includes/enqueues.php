@@ -2,12 +2,12 @@
 /**
  * Add custom scripts
  */
- add_action( 'wp_enqueue_scripts', 'ct_custom_scripts' , 0 , 1000);
+ add_action( 'wp_enqueue_scripts', 'ct_custom_scripts' , 9999 );
  function ct_custom_scripts() {
 	wp_enqueue_script("jquery");
  }
 
- add_action( 'wp_enqueue_scripts', 'add_enqueues_from_dist' , 0 , 10);
+ add_action( 'wp_enqueue_scripts', 'add_enqueues_from_dist' , 0);
 /**
  * Add enqueues from dist folder to WP
  */
@@ -39,8 +39,6 @@ add_filter('script_loader_tag', 'change_type_to_module', 10, 3);
 function change_type_to_module($tag, $handle, $source){
 $script_names = [
     'bundle',
-	'jquery-core',
-	'jquery-migrate'
   ];
 
   if( in_array( $handle, $script_names ) ) {

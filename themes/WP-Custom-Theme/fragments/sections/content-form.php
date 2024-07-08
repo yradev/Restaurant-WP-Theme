@@ -26,6 +26,10 @@
 			</div><!-- /.section__content -->
 
 			<div class="section__form">
+				<?php if( ! empty( $form_title ) ) :?>
+					<h3><?php echo $form_title ?></h3>
+				<?php endif ?>
+				
 				<?php  
 					if( ! empty( $shortcode ) ) {
 						echo do_shortcode( $shortcode );
