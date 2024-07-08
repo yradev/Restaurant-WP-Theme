@@ -12,12 +12,34 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "15",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "min": "",
+            "min": 0,
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_668bc1888db7a",
+            "label": "Special Price",
+            "name": "special_price",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
             "max": "",
             "placeholder": "",
             "step": "",
@@ -43,5 +65,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720426473
+    "modified": 1720435116
 }

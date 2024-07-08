@@ -58,6 +58,11 @@
 
 		@include responsive-down($r-tablet) {
 			font-size: 34px;
+			text-align: center;
+		}
+
+		@include responsive-down($r-mobile) {
+			font-size: 32px;
 		}
 
 		&:last-child {

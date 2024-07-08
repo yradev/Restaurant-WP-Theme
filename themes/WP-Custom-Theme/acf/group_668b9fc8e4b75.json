@@ -788,6 +788,86 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_668bc3380eb19": {
+                    "key": "layout_668bc3380eb19",
+                    "name": "special_offers",
+                    "label": "Special Offers",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_668bc3bc0eb1c",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_668bc3c60eb1d",
+                            "label": "Subtitle",
+                            "name": "subtitle",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_668bc3d10eb1e",
+                            "label": "Items",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "It will get items from theme settings if this is empty.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "ct_item"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "return_format": "id",
+                            "min": "",
+                            "max": 4,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -818,5 +898,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720426483
+    "modified": 1720435983
 }
