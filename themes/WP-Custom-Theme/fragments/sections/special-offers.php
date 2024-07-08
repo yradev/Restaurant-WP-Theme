@@ -15,7 +15,7 @@
 	$items = new WP_Query( $args );
  ?>
 
-<section class="section-cards">
+<section class="section-cards" data-aos="fade-in">
 	<div class="shell">
 		<div class="section__head">
 			<?php if( ! empty( $subtitle ) ) :?>

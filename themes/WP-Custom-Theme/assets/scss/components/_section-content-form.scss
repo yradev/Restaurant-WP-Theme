@@ -1,0 +1,63 @@
+//------------------------------------------------------------ 
+//	Section content form
+//------------------------------------------------------------
+
+.section-content-form {
+	@include default_padding();
+
+	position: relative;
+
+	.section__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.section__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.section__content {
+		width: 55.3%;
+		padding-right: 20px;
+	}
+
+	.section__content-inner {
+		max-width: 510px;
+	}
+
+	.section__form {
+		width: 44.7%;
+	}
+
+	.section__subtitle {
+		font-family: $ff-alt;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 1.19444;
+		color: $c-light-beige;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__content h2 {
+		margin-bottom: 24px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__entry {
+		color: $c-light;
+	}
+}
