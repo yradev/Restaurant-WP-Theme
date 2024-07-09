@@ -2,12 +2,14 @@
 /**
  * Add custom scripts
  */
- add_action( 'wp_enqueue_scripts', 'ct_custom_scripts' , 9999 );
+ add_action( 'wp_enqueue_scripts', 'ct_custom_scripts' , 0 );
  function ct_custom_scripts() {
+	$google_api_key = get_field( 'ct_google_maps_key' , 'option' );
 	wp_enqueue_script("jquery");
+	wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key=' . $google_api_key);
  }
 
- add_action( 'wp_enqueue_scripts', 'add_enqueues_from_dist' , 0);
+ add_action( 'wp_enqueue_scripts', 'add_enqueues_from_dist' , 1);
 /**
  * Add enqueues from dist folder to WP
  */
@@ -32,7 +34,7 @@ function add_enqueues_from_dist() {
 
 
  /**
- * Changing type of scripts to module
+ * Async scripts
  */
 
 add_filter('script_loader_tag', 'change_type_to_module', 10, 3);

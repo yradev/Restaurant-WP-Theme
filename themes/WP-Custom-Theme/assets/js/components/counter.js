@@ -23,4 +23,6 @@ const observer = new IntersectionObserver(handleIntersection, {
 	threshold: 0.1
 });
 
-observer.observe($('.js-counter-section')[0]);
+$('.js-counter-section').each( function( key, element ) {
+	observer.observe(element);
+} )

@@ -1,0 +1,20 @@
+//------------------------------------------------------------ 
+//	Section map
+//------------------------------------------------------------
+
+.section-map {
+	@include default_margin();
+
+	.section__map {
+		width: 100%;
+		height: 500px;
+
+		@include responsive-down($r-tablet) {
+			height: 400px;
+		}
+
+		@include responsive-down($r-mobile) {
+			height: 350px;
+		}
+	}
+}

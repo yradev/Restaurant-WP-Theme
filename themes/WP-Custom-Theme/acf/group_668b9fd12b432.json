@@ -41,6 +41,26 @@
             "append": ""
         },
         {
+            "key": "field_668d4f6e8f1cc",
+            "label": "Google Maps API Key",
+            "name": "ct_google_maps_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_668bc0dd3d9c3",
             "label": "Contacts",
             "name": "",
@@ -290,5 +310,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720512456
+    "modified": 1720536974
 }
