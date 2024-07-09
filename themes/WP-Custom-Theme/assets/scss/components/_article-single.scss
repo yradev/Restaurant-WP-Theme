@@ -1,0 +1,22 @@
+//------------------------------------------------------------ 
+//	Article Single
+//------------------------------------------------------------
+
+.article-single {
+	.section__head {
+		text-align: center;
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__content {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

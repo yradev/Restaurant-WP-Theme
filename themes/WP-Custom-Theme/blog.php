@@ -3,7 +3,7 @@
 <section class="section-blog">
     <div class="shell">
         <header class="section__head">
-            <h1>Blog Page</h1>
+            <h1><?php _e('Blog Page' , 'crb') ?></h1>
         </header><!-- /.section__head -->
 
         <div class="section__body">

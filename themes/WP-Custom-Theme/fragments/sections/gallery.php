@@ -4,7 +4,7 @@
 	}
 ?>
 <section class="section-gallery">
-	<div class="slider-gallery js-slider-gallery">
+	<div class="slider-gallery js-slider-gallery" data-aos="fade-in">
 		<div class="slider__clip swiper">
 			<div class="slider__slides swiper-wrapper">
 				<?php foreach( $images as $image ) :?>					
@@ -25,7 +25,7 @@
 		</div><!-- /.slider__clip -->
 	</div><!-- /.slider js-slider -->
 
-	<ul>
+	<ul data-aos="fade-up">
 		<?php foreach( $images as $key => $image ) :?>
 			<li>
 				<a href="#" class="js-slider-gallery-image" data-id="<?php echo $key ?>">

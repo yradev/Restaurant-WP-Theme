@@ -14,7 +14,7 @@
 
 	.menu {
 		display: flex;
-		gap: 40px;
+		gap: 30px;
 
 		@include responsive-down($r-small-desktop) {
 			gap: 20px;
