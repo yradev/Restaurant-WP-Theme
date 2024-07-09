@@ -1,0 +1,53 @@
+//------------------------------------------------------------ 
+//	Slider Gallery
+//------------------------------------------------------------
+
+.slider-gallery {
+	width: 100%;
+	height: 650px;
+
+	@include responsive-down($r-tablet) {
+		height: 500px;
+	}
+
+	.slider__clip {
+		height: 100%;
+	}
+
+	.slider__slide img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	
+	.slider__nav {
+		position: absolute;
+		left: 0;
+		top:50%;
+		width: 100%;
+		transform: translateY(-50%);
+		z-index: 2;
+		display: flex;
+		justify-content: space-between;
+		padding: 30px;
+
+		@include responsive-down($r-large-desktop) {
+			padding: 10px;
+		}
+	}
+
+	.slider__arrow {
+		font-size: 40px;
+		cursor: pointer;;
+		transition: opacity $t-duration;
+
+		@include responsive-down($r-mobile) {
+			font-size: 30px;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

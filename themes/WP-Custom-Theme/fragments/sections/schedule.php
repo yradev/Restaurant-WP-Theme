@@ -15,7 +15,7 @@
 								<?php if( $day['is_open'] ) :?>
 									<p>: <?php echo $day['open_time'] ?> - <?php echo $day['close_time'] ?></p>
 								<?php else: ?>
-									<p><?php _e('Closed' , 'crb') ?></p>
+									<p><?php _e('Затворено' , 'crb') ?></p>
 								<?php endif ?>
 							</li>
 						<?php endforeach ?>

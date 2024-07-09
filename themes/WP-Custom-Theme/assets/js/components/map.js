@@ -27,6 +27,5 @@ function initMap( element ) {
 }
 
 $maps.each( function( key, element ) {
-	console.log(element);
 	initMap(element);
 } );

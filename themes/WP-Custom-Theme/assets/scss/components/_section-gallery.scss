@@ -1,0 +1,34 @@
+//------------------------------------------------------------ 
+//	Section Gallery
+//------------------------------------------------------------
+
+.section-gallery {
+	ul {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 10px;
+		margin-top: 10px;
+
+		@include responsive-down($r-small-desktop) {
+			grid-template-columns: repeat(4, 1fr);			
+		}
+
+		@include responsive-down($r-mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	ul li a {
+		height: 300px;
+
+		@include responsive-down($r-tablet) {
+			height: 200px;
+		}
+	}
+
+	ul li img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
