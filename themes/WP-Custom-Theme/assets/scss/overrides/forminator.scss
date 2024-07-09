@@ -24,7 +24,8 @@
 		}
 	}
 
-	.forminator-input {
+	.forminator-input,
+	.forminator-textarea {
 		width: 100%;
 		height: 50px;
 		padding: 14px;
@@ -41,10 +42,12 @@
 		&::placeholder {
 			opacity: 1;
 			color: $c-white;
+			font-size: 14px;
 		}
 	}
 
-	.forminator-has_error .forminator-input {
+	.forminator-has_error .forminator-input,
+	.forminator-has_error .forminator-textarea {
 		border-color: red;
 	}
 

@@ -1,8 +1,8 @@
 //------------------------------------------------------------ 
-//	Section content form
+//	Section contacts
 //------------------------------------------------------------
 
-.section-content-form {
+.section-contacts {
 	@include default_padding();
 
 	position: relative;
@@ -110,7 +110,65 @@
 		}
 	}
 
+	.section__content .section__contact {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__contact i {
+		font-size: 24px;
+		width: 50px;
+		height: 50px;
+		background-color: $c-light-beige;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 99em;
+
+		@include responsive-down($r-small-desktop) {
+			font-size: 20px;
+			width: 50px;
+			height: 50px;
+		}
+
+		@include responsive-down($r-tablet) {
+			font-size: 18px;
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	.section__contact a {
+		display: block;
+		font-size: 20px;
+		line-height: 1.5;
+		font-weight: 500;
+
+		@include responsive-down($r-small-desktop) {
+			font-size: 18px;
+		}
+
+		@include responsive-down($r-mobile) {
+			font-size: 16px;
+		}
+	}
+
 	.section__entry {
 		color: $c-light;
+		margin-bottom: 30px;
+
+		@include responsive-down($r-mobile) {
+			margin-bottom: 20px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }

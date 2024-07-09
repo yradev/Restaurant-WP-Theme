@@ -1,4 +1,8 @@
-<section class="section-content-form" id=<?php echo $anchor ?>>
+<?php 
+	$contacts = get_field( 'ct_contacts' , 'options' );
+?>
+
+<section class="section-contacts" id="<?php echo $anchor ?>"  data-aos="fade-in">
 	<?php if( ! empty( $background_image ) ) {
 			echo wp_get_attachment_image( $background_image , 'full', false, ['class' => 'section__bg'] );
 		}
@@ -22,6 +26,21 @@
 							<?php echo $description ?>
 						</div><!-- /.section__entry -->
 					<?php endif ?>
+
+					<?php if( ! empty( $contacts ) ) :?>
+						<ul class="section__contacts">
+							<?php foreach( $contacts as $contact ) :?>
+								<li class="section__contact">
+									<?php if( ! empty( $contact['icon'] ) ) {
+											echo $contact['icon'];
+										}
+									?>							
+
+									<a href="<?php echo ct_get_contact_link($contact['contact']) ?>"><?php echo $contact['contact'] ?></a>
+								</li>
+							<?php endforeach ?>
+						</ul>
+					<?php endif ?>
 				</div><!-- /.section__content-inner -->
 			</div><!-- /.section__content -->
 
@@ -38,4 +57,4 @@
 			</div><!-- /.section__form -->
 		</div><!-- /.section__inner -->
 	</div><!-- /.shell -->
-</section><!-- /.section-content-form -->
+</section><!-- /.section-contacts -->
