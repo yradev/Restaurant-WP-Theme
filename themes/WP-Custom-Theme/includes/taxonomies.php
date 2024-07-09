@@ -3,7 +3,7 @@
 /*
 * Register taxonomy
 */
-add_action( 'init', 'ct_register_taxonomies' );
+add_action( 'init', 'ct_register_taxonomies', 0 );
 function ct_register_taxonomies() {
 	register_taxonomy(
 		'ct_item_category', 

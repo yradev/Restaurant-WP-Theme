@@ -24,7 +24,7 @@
 			<div class="swiper-pagination"></div>
 		</div><!-- /.slider__clip -->
 	</div><!-- /.slider js-slider -->
-
+	
 	<ul data-aos="fade-up">
 		<?php foreach( $images as $key => $image ) :?>
 			<li>
