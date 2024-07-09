@@ -113,13 +113,11 @@
 */
 .ui-datepicker {
 	background: $c-beige;
-	padding: 20px;
 
 	.ui-datepicker-header {
 		display: grid;
 		grid-template-columns: repeat(3, auto);
 		gap: 30px;
-		padding-left: 20px;
 	}
 
 	.ui-datepicker-prev {
