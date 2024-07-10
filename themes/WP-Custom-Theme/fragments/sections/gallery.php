@@ -7,7 +7,7 @@
 	<div class="slider-gallery js-slider-gallery" data-aos="fade-in">
 		<div class="slider__clip swiper">
 			<div class="slider__slides swiper-wrapper">
-				<?php foreach( $images as $image ) :?>					
+				<?php foreach( $images as $key => $image ) :?>					
 					<div class="slider__slide swiper-slide">
 						<?php 
 							echo wp_get_attachment_image( $image['image'] , 'full' );

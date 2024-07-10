@@ -12,4 +12,5 @@ let slider = new Swiper('.js-hero-slider .swiper', {
         nextEl: ".js-slider-next",
         prevEl: ".js-slider-prev",
       },
+
 });
