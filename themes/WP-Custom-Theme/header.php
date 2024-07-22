@@ -22,11 +22,21 @@
                     <span></span>
                 </div><!-- /.nav-trigger -->
 
-                <?php wp_nav_menu( [
-                    'theme_location' => 'header_menu',
-                    'container' => 'nav',
-                    'container_class' => 'nav',
-                ] ); ?>
+                <div class="header__nav">
+                    <div class="header__nav-inner">
+                        <?php wp_nav_menu( [
+                            'theme_location' => 'header_menu',
+                            'container' => 'nav',
+                            'container_class' => 'nav',
+                        ] ); ?>
+
+                        <?php wp_nav_menu( [
+                            'theme_location' => 'language_menu',
+                            'container' => 'nav',
+                            'container_class' => 'nav',
+                        ] ); ?>
+                    </div><!-- /.header__nav-inner -->
+                </div><!-- /.header__nav -->
             </div><!-- /.header__inner -->
         </div><!-- /.shell -->
     </header><!-- /.header -->

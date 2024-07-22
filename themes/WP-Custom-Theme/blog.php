@@ -3,7 +3,7 @@
 <section class="section-blog">
     <div class="shell">
         <header class="section__head">
-            <h1><?php _e('Blog Page' , 'crb') ?></h1>
+            <h1><?php ct_e('Blog Page' , 'ct') ?></h1>
         </header><!-- /.section__head -->
 
         <div class="section__body">
@@ -17,7 +17,7 @@
             ?>
                 
             <?php else: ?>
-                <p><?php esc_html_e('No posts, yet.'); ?></p>
+                <p><?php ct_e('No posts, yet.'); ?></p>
             <?php endif; ?>
         </div><!-- /.section__body -->
     </div><!-- /.shell -->

@@ -4,11 +4,6 @@
 
 .nav {
 	@include responsive-down($r-tablet) {
-		width: 100%;
-		display: grid;
-		grid-template-rows: 0fr;
-		overflow: hidden;
-		transition: grid-template-rows 1s;
 		margin-top: 20px;
 	}
 
@@ -32,6 +27,9 @@
 		font-size: 16px;
 		line-height: 1.5;
 		color: $c-light;
+		display: flex;
+		gap: 5px;
+		align-items: center;
 	}
 
 	.menu li {
@@ -117,10 +115,19 @@
 	.sub-menu li a {
 		padding: 2px 0;
 	}
-}
 
-body.has-open-menu .nav {
+	#menu-language-menu li.menu-item-has-children a {
 		@include responsive-down($r-tablet) {
-			grid-template-rows: 1fr;
+			pointer-events: auto;			
 		}
+	}
+
+	#menu-language-menu .sub-menu {
+		@include responsive-down($r-tablet) {
+			opacity: 1;
+			pointer-events: auto;
+			display: block;
+			padding-left: 0;	
+		}
+	}
 }

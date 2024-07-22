@@ -6,7 +6,7 @@ get_header();
 <section class="section-blog">
     <div class="shell">
         <header class="section__head">
-            <h1> <?php echo printf(esc_html__('Search Results for: %s', 'twentytwenty'), '<span>' . get_search_query() . '</span>'); ?></h1>
+            <h1> <?php echo printf(ct__('Search Results for: %s', 'twentytwenty'), '<span>' . get_search_query() . '</span>'); ?></h1>
         </header><!-- /.section__head -->
 
         <div class="section__body">
@@ -20,7 +20,7 @@ get_header();
             ?>
                 
             <?php else: ?>
-                <p><?php esc_html_e('No posts, yet.'); ?></p>
+                <p><?php ct_e('No posts, yet.'); ?></p>
             <?php endif; ?>
         </div><!-- /.section__body -->
     </div><!-- /.shell -->
