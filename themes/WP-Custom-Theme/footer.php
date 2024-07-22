@@ -1,9 +1,9 @@
     </main><!-- /.main -->
 
     <?php  
-        $content = get_field( 'ct_footer_content' , 'option' );
+        $content = get_field( 'ct_footer_content' , pll_current_language() );
         $socials = get_field ( 'ct_socials' , 'option' );
-        $contacts = get_field ( 'ct_contacts' , 'option' );
+        $contacts = get_field ( 'ct_contacts' , pll_current_language() );
         wp_footer();
     ?>
     

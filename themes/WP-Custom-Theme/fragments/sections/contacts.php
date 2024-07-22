@@ -1,5 +1,5 @@
 <?php 
-	$contacts = get_field( 'ct_contacts' , 'options' );
+	$contacts = get_field( 'ct_contacts' , pll_current_language() );
 ?>
 
 <section class="section-contacts" id="<?php echo $anchor ?>"  data-aos="fade-in">

@@ -11,10 +11,33 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
 		'page_title'    => 'Footer Settings',
 		'menu_title'    => 'Footer Settings',
-		'menu_slug'     => 'theme-footer-settings',
-		'parent_slug'   => 'theme-general-settings',
-		'redirect'      => false
+		'menu_slug'     => 'footer-settings',
+		'redirect'      => true
 	));
+
+	$languages = pll_languages_list();
+
+	foreach( $languages as $lang ) {
+		acf_add_options_page(array(
+			'page_title'    => 'Theme Settings - ' . strtoupper($lang),
+			'menu_title'    => 'Theme Settings - ' . strtoupper($lang),
+			'menu_slug'     => 'theme-settings-' . $lang,
+			'parent_slug'   => 'theme-general-settings',
+			'post_id' => $lang,
+			'redirect'      => false
+		));
+	}
+
+	foreach( $languages as $lang ) {
+		acf_add_options_page(array(
+			'page_title'    => 'Footer Settings - ' . strtoupper($lang),
+			'menu_title'    => 'Footer Settings - ' . strtoupper($lang),
+			'menu_slug'     => 'footer-settings-' . $lang,
+			'parent_slug'   => 'footer-settings',
+			'post_id' => $lang,
+			'redirect'      => false
+		));
+	}
 }
 
 /**

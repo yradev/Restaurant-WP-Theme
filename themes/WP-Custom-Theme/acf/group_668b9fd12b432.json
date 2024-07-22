@@ -21,26 +21,6 @@
             "selected": 0
         },
         {
-            "key": "field_668b9fd12fbaf",
-            "label": "Default Currency",
-            "name": "ct_default_currency",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_668d4f6e8f1cc",
             "label": "Google Maps API Key",
             "name": "ct_google_maps_key",
@@ -59,99 +39,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_668bc0dd3d9c3",
-            "label": "Contacts",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_668b9fd1337ef",
-            "label": "Contacts",
-            "name": "ct_contacts",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Contact",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_668cefb650c00",
-                    "label": "Icon",
-                    "name": "icon",
-                    "aria-label": "",
-                    "type": "font-awesome",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "icon_sets": [
-                        "solid",
-                        "regular",
-                        "brands"
-                    ],
-                    "custom_icon_set": "",
-                    "default_label": "",
-                    "default_value": "",
-                    "save_format": "element",
-                    "allow_null": 0,
-                    "show_preview": 1,
-                    "enqueue_fa": 0,
-                    "fa_live_preview": "",
-                    "choices": [],
-                    "parent_repeater": "field_668b9fd1337ef"
-                },
-                {
-                    "key": "field_668b9fd13edf7",
-                    "label": "Contact",
-                    "name": "contact",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_668b9fd1337ef"
-                }
-            ]
         },
         {
             "key": "field_668bc0e73d9c4",
@@ -310,5 +197,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720536974
+    "modified": 1721664042
 }
