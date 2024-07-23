@@ -7,7 +7,7 @@ function create_post_type() {
         'ct_item',
         [
             'labels' => ct_get_posttype_labels( 'Item' , 'Items'),
-            'public' => false,
+            'public' => true,
             'exclude_from_search' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'items'),

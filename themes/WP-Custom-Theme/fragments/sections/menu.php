@@ -62,7 +62,7 @@ if( count($terms) == 0 ) {
 										<li>
 											<h5><?php the_title(); ?></h5>
 											
-											<strong><?php echo get_field('price') . ' ' . get_field( 'ct_default_currency' , 'option' ) ?></strong>
+											<strong><?php echo get_field('price') . ' ' . get_field( 'ct_default_currency' , pll_current_language() ) ?></strong>
 
 											<div class="section__entry">
 												<p><?php the_content() ?></p>

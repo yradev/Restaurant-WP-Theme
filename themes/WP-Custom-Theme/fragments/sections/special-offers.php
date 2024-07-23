@@ -1,15 +1,15 @@
 <?php 
-	$current_items = get_field( $items );
 	$specials = get_field( 'ct_specials' , 'option' );
 	$args = [
 		'posts_per_page' => -1,
 		'post_type' => 'ct_item',
-		'posts__in' => $current_items,
 		'orderby' => 'posts__in'
 	];
 
-	if ( empty( $current_items ) ) {
+	if ( empty( $items ) ) {
 		$args['post__in'] = $specials;	
+	} else {
+		$args['post__in'] = $items;	
 	}
 
 	$items = new WP_Query( $args );
@@ -36,7 +36,7 @@
 						<h3><?php the_title(); ?></h3>
 
 						<?php if( ! empty( get_field( 'special_price' ) ) ) :?>
-							<p><?php echo get_field( 'special_price' ) . ' ' . get_field( 'ct_default_currency' , 'option' ) ?></p>
+							<p><?php echo get_field( 'special_price' ) . ' ' . get_field( 'ct_default_currency' , pll_current_language() ) ?></p>
 						<?php endif ?>
 					</div><!-- /.section__card -->
 				<?php endwhile; wp_reset_postdata(); ?>

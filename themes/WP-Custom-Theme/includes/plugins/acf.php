@@ -60,3 +60,23 @@ function ct_acf_load_point( $paths ) {
     $paths[] = get_stylesheet_directory() . '/acf-folder';
     return $paths;
 }
+
+
+/**
+ * Add choices to ct_day select
+ */
+function my_acf_load_field( $field ) {
+    if ( $field['name'] == 'ct_day' ) {
+		echo 'lazaa';
+        $field['choices']['Monday'] = ct__('Monday' , 'ct'); 
+        $field['choices']['Tuesday'] = ct__('Tuesday' , 'ct'); 
+        $field['choices']['Wednesday'] = ct__('Wednesday' , 'ct'); 
+        $field['choices']['Thursday'] = ct__('Thursday' , 'ct'); 
+        $field['choices']['Friday'] = ct__('Friday' , 'ct'); 
+        $field['choices']['Saturday'] = ct__('Saturday ' , 'ct'); 
+        $field['choices']['Sunday'] = ct__('Sunday' , 'ct'); 
+    }
+    
+    return $field;
+}
+add_filter('acf/load_field', 'my_acf_load_field');

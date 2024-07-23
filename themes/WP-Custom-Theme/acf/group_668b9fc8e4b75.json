@@ -1074,7 +1074,7 @@
                                 {
                                     "key": "field_668d2731ad60e",
                                     "label": "Day",
-                                    "name": "day",
+                                    "name": "ct_day",
                                     "aria-label": "",
                                     "type": "select",
                                     "instructions": "",
@@ -1086,13 +1086,13 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "Понеделник": "Понеделник",
-                                        "Вторник": "Вторник",
-                                        "Сряда": "Сряда",
-                                        "Четвъртък": "Четвъртък",
-                                        "Петък": "Петък",
-                                        "Събота": "Събота",
-                                        "Неделя": "Неделя"
+                                        "Monday": "Monday",
+                                        "tuesday": "Tuesday",
+                                        "wednesday": "Wednesday",
+                                        "thursday": "Thursday",
+                                        "friday": "Friday",
+                                        "saturday": "Saturday ",
+                                        "sunday": "Sunday"
                                     },
                                     "default_value": false,
                                     "return_format": "value",
@@ -1373,5 +1373,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720542410
+    "modified": 1721710262
 }

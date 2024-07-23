@@ -10,12 +10,12 @@
 					<ul>
 						<?php foreach( $schedule as $day ) :?>
 							<li>
-								<h3><?php echo $day['day'] ?></h3>
+								<h3><?php echo $day['ct_day'] ?></h3>
 
 								<?php if( $day['is_open'] ) :?>
 									<p>: <?php echo $day['open_time'] ?> - <?php echo $day['close_time'] ?></p>
 								<?php else: ?>
-									<p><?php ct_e('Затворено' , 'crb') ?></p>
+									<p><?php ct_e('Closed' , 'crb') ?></p>
 								<?php endif ?>
 							</li>
 						<?php endforeach ?>
