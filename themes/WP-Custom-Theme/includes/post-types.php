@@ -31,13 +31,13 @@ function create_post_type() {
         'singular_name'       => ct__( $name, 'ct' ),
         'menu_name'           => ct__( $name, 'ct' ),
         'all_items'           => ct__( 'All ' . $names, 'ct' ),
-        'view_item'           => ct__( 'View' . $name, 'ct' ),
+        'view_item'           => ct__( 'View ' . $name, 'ct' ),
         'add_new_item'        => ct__( 'Add New ' . $name, 'ct' ),
         'add_new'             => ct__( 'Add New', 'ct' ),
-        'edit_item'           => ct__( 'Edit' . $name, 'ct' ),
-        'update_item'         => ct__( 'Update' . $name, 'ct' ),
-        'search_items'        => ct__( 'Search' . $name, 'ct' ),
-		'new_item'            => ct__( 'New' . $name, 'ct' ),
+        'edit_item'           => ct__( 'Edit ' . $name, 'ct' ),
+        'update_item'         => ct__( 'Update ' . $name, 'ct' ),
+        'search_items'        => ct__( 'Search ' . $name, 'ct' ),
+		'new_item'            => ct__( 'New ' . $name, 'ct' ),
         'not_found'           => ct__( 'Not Found', 'ct' ),
         'not_found_in_trash'  => ct__( 'Not found in Trash', 'ct' )
 	];

@@ -61,22 +61,41 @@ function ct_acf_load_point( $paths ) {
     return $paths;
 }
 
-
-/**
+/** 
  * Add choices to ct_day select
- */
-function my_acf_load_field( $field ) {
-    if ( $field['name'] == 'ct_day' ) {
-		echo 'lazaa';
-        $field['choices']['Monday'] = ct__('Monday' , 'ct'); 
-        $field['choices']['Tuesday'] = ct__('Tuesday' , 'ct'); 
-        $field['choices']['Wednesday'] = ct__('Wednesday' , 'ct'); 
-        $field['choices']['Thursday'] = ct__('Thursday' , 'ct'); 
-        $field['choices']['Friday'] = ct__('Friday' , 'ct'); 
-        $field['choices']['Saturday'] = ct__('Saturday ' , 'ct'); 
-        $field['choices']['Sunday'] = ct__('Sunday' , 'ct'); 
-    }
-    
-    return $field;
-}
-add_filter('acf/load_field', 'my_acf_load_field');
+*/
+add_action('init', function() {
+	global $day_of_week;
+	$day_of_week = [
+		ct__('Monday' , 'ct') => ct__('Monday' , 'ct'), 
+		ct__('Tuesday' , 'ct') => ct__('Tuesday' , 'ct'), 
+		ct__('Wednesday' , 'ct') => ct__('Wednesday' , 'ct'), 
+		ct__('Thursday' , 'ct') => ct__('Thursday' , 'ct'), 
+		ct__('Friday' , 'ct') => ct__('Friday' , 'ct'), 
+		ct__('Saturday ' , 'ct') => ct__('Saturday ' , 'ct'), 
+		ct__('Sunday' , 'ct') => ct__('Sunday' , 'ct') 
+	];
+
+
+	/**
+	 * Load Days
+	 */
+	add_filter('acf/load_field', 'ct_load_days');
+	function ct_load_days( $field ) {
+		global $day_of_week;
+		if ( $field['name'] == 'ct_day' ) {
+			$field['choices'] = $day_of_week;
+		}    
+
+		return $field;
+	}
+
+	/**
+	 * Add Translations
+	 */
+	if( function_exists( 'pll_register_string' ) ) {
+		foreach( $day_of_week as $key => $value ) {
+			pll_register_string($key, $value, 'ct');
+		}
+	}
+});
