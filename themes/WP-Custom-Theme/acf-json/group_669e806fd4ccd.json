@@ -5,7 +5,7 @@
         {
             "key": "field_669e80708725d",
             "label": "Default Currency",
-            "name": "default_currency",
+            "name": "ct_default_currency",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -123,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721708276
+    "modified": 1724677027
 }

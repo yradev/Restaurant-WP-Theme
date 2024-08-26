@@ -40,26 +40,6 @@ if( function_exists('acf_add_options_page') ) {
 	}
 }
 
-/**
- * Update acf settings to watch from /acf folder 
- */
-add_filter('acf/settings/save_json', 'ct_acf_save_point');
-function ct_acf_save_point( $path ) {
-    $path = get_stylesheet_directory() . '/acf';
-    return $path;
-}
-
-
-/**
- * Update acf settings to watch from /acf folder 
- */
-add_filter('acf/settings/load_json', 'ct_acf_load_point');
-function ct_acf_load_point( $paths ) {
-    unset($paths[0]);
-
-    $paths[] = get_stylesheet_directory() . '/acf-folder';
-    return $paths;
-}
 
 /** 
  * Add choices to ct_day select

@@ -28,14 +28,14 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "footer-settings-en"
+                "value": "footer-settings-bg"
             }
         ],
         [
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "footer-settings-bg"
+                "value": "footer-settings-en"
             }
         ]
     ],
@@ -48,5 +48,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721662890
+    "modified": 1724677027
 }

@@ -1087,12 +1087,12 @@
                                     },
                                     "choices": {
                                         "Monday": "Monday",
-                                        "tuesday": "Tuesday",
-                                        "wednesday": "Wednesday",
-                                        "thursday": "Thursday",
-                                        "friday": "Friday",
-                                        "saturday": "Saturday ",
-                                        "sunday": "Sunday"
+                                        "Tuesday": "Tuesday",
+                                        "Wednesday": "Wednesday",
+                                        "Thursday": "Thursday",
+                                        "Friday": "Friday",
+                                        "Saturday ": "Saturday ",
+                                        "Sunday": "Sunday"
                                     },
                                     "default_value": false,
                                     "return_format": "value",
@@ -1373,5 +1373,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721710262
+    "modified": 1724677027
 }
