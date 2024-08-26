@@ -11,5 +11,5 @@ function ct_add_theme_support() {
  */
 add_action( 'wp_head', 'ct_custom_favicon');
 function ct_custom_favicon(){
-    echo "<link rel='shortcut icon' href='" . get_stylesheet_directory_uri() . "/assets/images/ff.ico' />" . "\n";
+    echo "<link rel='shortcut icon' href='" . get_stylesheet_directory_uri() . "/assets/images/favicon.ico' />" . "\n";
 }
