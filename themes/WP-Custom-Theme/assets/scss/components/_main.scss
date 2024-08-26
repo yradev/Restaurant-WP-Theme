@@ -6,6 +6,10 @@
 	section {
 		&:first-child:not(.hero-large):not(.hero):not(.section-gallery) {
 			margin-top: 150px;
+
+			@include responsive-down($r-tablet) {
+				margin-top: 100px;
+			}
 		}
 
 		&:last-child {

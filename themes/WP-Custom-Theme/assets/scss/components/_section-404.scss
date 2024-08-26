@@ -1,0 +1,32 @@
+//------------------------------------------------------------ 
+//	Section 404
+//------------------------------------------------------------
+
+.section-404 {
+	.section__inner {
+		min-height: 400px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		@include responsive-down($r-tablet) {
+			min-height: 200px;
+		}
+	}
+
+	h1 {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		display: inline-block;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+}
