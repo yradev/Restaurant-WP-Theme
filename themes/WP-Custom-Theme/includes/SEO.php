@@ -29,3 +29,13 @@
 
 	return $attr;
  } 
+
+
+/**
+ * Add nofollow if the link is externel
+ */
+function ct_check_for_external_link( $href ) {
+	if( ! str_contains($href, home_url()) && ! str_starts_with( $href , '#')) {
+		echo 'rel="nofollow"';
+	};
+}

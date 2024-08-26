@@ -25,7 +25,7 @@
                         <ul class="socials">
                             <?php foreach( $socials as $social ) :?>
                                 <li class="social">
-                                    <a href="<?php echo $social['link'] ?>" target="_blank">
+                                    <a href="<?php echo $social['link'] ?>" target="_blank" <?php ct_check_for_external_link($social['link']); ?>>
                                         <?php echo $social['icon'] ?>
                                     </a>
                                 </li>
@@ -52,7 +52,7 @@
                             <ul class="contacts">
                                 <?php foreach( $contacts as $contact ) :?>
                                     <li class="contact">
-                                        <a href="<?php echo ct_get_contact_link($contact['contact']) ?>" target="_blank"> 
+                                        <a href="<?php echo ct_get_contact_link($contact['contact']) ?>" target="_blank" <?php ct_check_for_external_link($contact['contact']); ?>> 
                                             <strong>
                                                 <?php 
                                                     $regex = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/'; 
@@ -71,7 +71,8 @@
                                                 ?>                                        
                                             </strong>
 
-                                            <?php echo $contact['contact'] ?>
+                                            <?php echo $contact['contact'] 
+                                            ?>
                                         </a>
                                     </li>
                                 <?php endforeach ?>

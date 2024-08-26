@@ -34,9 +34,9 @@
 									<?php if( ! empty( $contact['icon'] ) ) {
 											echo $contact['icon'];
 										}
-									?>							
-
-									<a href="<?php echo ct_get_contact_link($contact['contact']) ?>"><?php echo $contact['contact'] ?></a>
+									?>			
+									
+									<?php ct_render_link( $contact['contact'] , ct_get_contact_link($contact['contact']) ) ?>
 								</li>
 							<?php endforeach ?>
 						</ul>

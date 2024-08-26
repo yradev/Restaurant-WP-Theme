@@ -18,8 +18,29 @@ function ct_render_button( $button, $classes = 'btn', $styles = '' ) {
 		return;
 	}
 
-	echo "<a href='{$button['url']}' target='{$button['target']}' class='{$classes}' style = '{$styles}'>{$button['title']}</a>";
+	ct_render_link( $button['title'] , $button['url'], $classes, $styles, $button['target'] );
 }
+
+/**
+ * Add link that support no-follow for SEO
+ */
+function ct_render_link( $title, $href, $class = '' , $style = '', $target = '') {
+	$compact_attributes = compact('href', 'class', 'style', 'target');
+	$attributes = array_filter($compact_attributes, function( $value, $key ) {
+		return ! empty( $value );
+	}, ARRAY_FILTER_USE_BOTH);
+
+	array_walk($attributes, function(&$value, $key) {
+        $value = $key . '="' . $value . '"';
+    });
+
+	if( ! str_contains($href, home_url()) && str_starts_with( $href , 'http')) {
+		$attributes[] = 'rel="nofollow"';
+	};
+    
+	echo '<a ' . implode( ' ' , $attributes ) . '>' . $title . '</a>';
+}
+
 
 /**
  * Get contact link from content
