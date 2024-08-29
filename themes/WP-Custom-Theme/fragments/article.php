@@ -1,6 +1,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('article'); ?>>
-    <img src="<?php echo bloginfo( 'template_directory' ) ?>/assets/images/temp/not-found.jpg" alt="" class="article__bg">
-
+     <?php if( empty(  get_the_post_thumbnail() ) ) :?>
+        <img src="<?php echo bloginfo( 'template_directory' ) ?>/assets/images/temp/not-found.jpg" alt="" class="article__bg">
+    <?php else: 
+        the_post_thumbnail('full' , ['class' => 'article__bg']);
+        endif;    
+    ?>
+    
     <a href="<?php echo get_the_permalink() ?>" class="article__link"></a>
     
     <div class="article__bar">

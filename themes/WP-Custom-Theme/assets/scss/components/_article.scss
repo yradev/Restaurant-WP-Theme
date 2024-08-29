@@ -9,6 +9,7 @@
     box-shadow: 3px 4px 9px 0px rgba(0,0,0,7);
     position: relative;
 	overflow: hidden;
+    border: 1px solid rgba($c-black, .5);
 
     @include responsive-down($r-mobile) {
         width: 100%;

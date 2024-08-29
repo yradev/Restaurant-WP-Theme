@@ -23,7 +23,7 @@
             ?>
                 
             <?php else: ?>
-                <p><?php ct_e('No posts, yet.'); ?></p>
+                <p><?php ct_e('No posts, yet.' , 'ct'); ?></p>
             <?php endif; ?>
         </div><!-- /.section__inner -->
 
