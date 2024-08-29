@@ -34,7 +34,7 @@
         </div><!-- /.article__content -->
 
         <div class="article__actions">
-            <a href="#" class="btn btn--small article__btn"><?php ct_e('Read More' , 'ct') ?></a><!-- / -->
+            <a href="#" class="btn btn--small article__btn"><?php ct_e('Read More' , 'Read More') ?></a><!-- / -->
         </div><!-- /.article__actions -->
     </div><!-- /.article__inner -->
 </article><!-- article ?> -->

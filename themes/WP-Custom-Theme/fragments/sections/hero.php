@@ -6,11 +6,11 @@
 	$hero_background = get_field( 'hero_bg' , 'option');
 
 	if ( is_home() ) {
-		$title = ct__('News' , 'ct');
+		$title = ct__('News' , 'News');
 	}
 
 	if ( is_search() ) {
-		$title = ct__('Search Results for: ', 'ct') . '<span>' . get_search_query() . '</span>';
+		$title = ct__('Search Results' , 'Search Results for: ') . '<span>' . get_search_query() . '</span>';
 	}
 
 	if ( is_single() ) {

@@ -23,14 +23,14 @@
             ?>
                 
             <?php else: ?>
-                <p><?php ct_e('No posts, yet.', 'ct'); ?></p>
+                <p><?php ct_e('No Posts', 'No posts, yet.'); ?></p>
             <?php endif; ?>
         </div><!-- /.section__inner -->
 
         <?php if( $paged < $total_pages ) :?>
             <div class="section__actions">
                 <a href="<?php echo add_query_arg( 'paged' , $paged + 1 ) ?>" class="btn js-load-more"> 
-                    <?php ct_e('Load More', 'ct') ?>
+                    <?php ct_e('Load More', 'Load More') ?>
                     <span class="spinner"></span><!-- /.spinner -->
                 </a>
             </div><!-- /.section__actions -->

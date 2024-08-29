@@ -1,59 +1,57 @@
 <?php  
+
 /**
  * Add echo string support for polylang
  */
-function ct_e( $content, $domain ) {
-	if (function_exists('pll_register_string')) {
-		pll_e( $content, $domain );
+function ct_e( $title, $content ) {
+	if (function_exists('pll_register_string')) { 
+		pll_e( $content , 'ct' );
+		ct_update_translation_db($title, $content);
 	} else {
-		_e( $content, $domain );
+		_e( $content, 'ct' );
 	}
 }
 
 /**
  * Add return string support for polylang
  */
-function ct__( $content, $domain ) {
+function ct__( $title, $content ) {
 	if (function_exists('pll_register_string')) {
-		return pll__( $content, $domain );
+		pll__( $content );
+		ct_update_translation_db($title, $content);	
 	} else {
-		return __( $content, $domain );
+		return __( $content, 'ct' );
 	}
 }
 
 /**
- * Read php files in theme dir and register all text_domains for backend translation
+ * Add translation to db
  */
-function ct_register_custom_group() {
-	if ( ! function_exists('pll_register_string')) {
+
+ function ct_update_translation_db( $title, $content ) {
+	$option_name = "ct_translation";
+	$translations = get_option($option_name, []);
+
+	$translations[$title] = $content;
+
+	update_option( $option_name, $translations );
+ }
+
+
+/**
+ * Register translations
+ */
+
+ add_action('init', 'ct_register_translations' );
+ function ct_register_translations() {
+		if ( ! function_exists('pll_register_string')) {
 		return;
 	}
 
-	$files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(get_template_directory()));
-	$text_domain = 'ct';
-	$domain_name = 'Custom Theme Group';
-	
-	foreach ($files as $file) {
-        if ($file->isDir() || $file->getExtension() !== 'php') {
-			continue;
-		}
+	$option_name = "ct_translation";
+	$translations = get_option($option_name, []);
 
-		if (strpos($file->getPathname(), DIRECTORY_SEPARATOR . 'includes') 
-		|| strpos($file->getPathname(), DIRECTORY_SEPARATOR . 'dist') 
-		|| strpos($file->getPathname(), DIRECTORY_SEPARATOR . 'node_modules') 
-		|| strpos($file->getPathname(), DIRECTORY_SEPARATOR . 'vendors') ) {
-			continue;
-		}
-
-        $content = file_get_contents($file->getRealPath());
-		preg_match_all('/ct_(e|_)\s*\(\s*[\'"]([^\'"]*)[\'"]\s*,\s*[\'"]' . $text_domain . '[\'"]\s*\)/', $content, $matches);
-        
-        if (!empty($matches[2])) {
-            foreach ($matches[2] as $string) {
-				$content_name = strtolower(str_replace(' ', '_', $string));
-                pll_register_string($content_name, $string, $domain_name);
-            }
-        }
-    }
-}
-add_action('admin_init', 'ct_register_custom_group');
+	foreach( $translations as $key => $value ) {
+		pll_register_string($key, $value, 'Custom Theme');
+	}
+ }

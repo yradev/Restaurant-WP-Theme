@@ -30,25 +30,16 @@ function ct_register_taxonomies() {
 
  function ct_get_category_labels( $name , $names ) {
 	$labels = [
-		'name'              => ct__( $name, 'ct' ),
-		'singular_name'     => ct__( $name, 'ct' ),
-		'search_items'      => ct__( 'Search ' . $names, 'ct' ),
-		'all_items'         => ct__( 'All ' . $names, 'ct' ),
-		'parent_item'       => ct__( 'Parent ' . $name, 'ct' ),
-		'parent_item_colon' => ct__( 'Parent ' . $name . ':', 'ct' ),
-		'edit_item'         => ct__( 'Edit ' . $name, 'ct' ),
-		'update_item'       => ct__( 'Update ' . $name, 'ct' ),
-		'add_new_item'      => ct__( 'Add New ' . $name, 'ct' ),
-		'new_item_name'     => ct__( 'New ' . $name . ' Name', 'ct' ),
-		'menu_name'         => ct__( $name, 'ct' ),
+		'name'              => ct__( 'Name', $name ),
+		'singular_name'     => ct__( 'Singular name', $name ),
+		'search_items'      => ct__( 'Search items', 'Search ' . $names ),
+		'all_items'         => ct__( 'All items', 'All ' . $names ),
+		'parent_item'       => ct__( 'Parent item', 'Parent ' . $name ),
+		'parent_item_colon' => ct__( 'Parent item colon', 'Parent ' . $name . ':' ),
+		'edit_item'         => ct__( 'Edit item', 'Edit ' . $name ),
+		'update_item'       => ct__( 'Update item', 'Update ' . $name ),
+		'add_new_item'      => ct__( 'Add new item', 'Add New ' . $name ),
+		'new_item_name'     => ct__( 'New item name', 'New ' . $name . ' Name', ),
+		'menu_name'         => ct__( 'Menu name', $name ),
 	];
-
-	// Register for backend translate
-	if( function_exists( 'pll_register_string' ) ) {
-		foreach( $labels as $key => $value ) {
-			pll_register_string($key, $value, 'ct');
-		}
-	}
-
-    return $labels;
  }

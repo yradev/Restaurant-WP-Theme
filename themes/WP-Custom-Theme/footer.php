@@ -37,7 +37,7 @@
 
                 <div class="footer__links">
                     <div class="footer__nav">
-                        <h5> <?php ct_e('Menu', 'ct') ?> </h5>
+                        <h5> <?php ct_e('Menu', 'Menu') ?> </h5>
                         
                         <?php wp_nav_menu( [
                             'theme_location' => 'header_menu',
@@ -47,7 +47,7 @@
                     </div><!-- /.footer__nav -->
                    
                     <div class="footer__contacts">
-                        <h5> <?php ct_e('Find Us', 'ct') ?> </h5>
+                        <h5> <?php ct_e('Find Us', 'Find Us') ?> </h5>
 
                         <?php if( ! empty( $contacts ) ) :?>
                             <ul class="contacts">
@@ -59,15 +59,15 @@
                                                     $regex = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/'; 
 
                                                     if( str_starts_with($contact['contact'], '+') ) {
-                                                        ct_e('P.' , 'ct');
+                                                        ct_e('Phone' , 'P.');
                                                     }
                                                 
                                                     else if( preg_match($regex, $contact['contact']) ) {
-                                                        ct_e('E.' , 'ct');
+                                                        ct_e('Email' , 'E.');
                                                     }
 
                                                     else {
-                                                        ct_e('L.' , 'ct');
+                                                        ct_e('Location' , 'L.');
                                                     }
                                                 ?>                                        
                                             </strong>
@@ -84,7 +84,7 @@
             </div><!-- /.footer__inner -->
 
             <div class="footer__bar">
-                <p>&copy <?php echo ct__('Copyright', 'ct') . ' ' . get_bloginfo( 'name' ) . ' ' . date("Y") . ct__( ', All right reserved.' , 'ct' ); ?></p>
+                <p>&copy <?php 'Copyright' . get_bloginfo( 'name' ) . ' ' . date("Y") . ', All right reserved.'; ?></p>
             </div><!-- /.footer__bar -->
         </div><!-- /.shell -->
     </footer><!-- /.footer -->
