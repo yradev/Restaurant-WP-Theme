@@ -20,10 +20,16 @@ export default defineConfig({
   },
   plugins: [
     {
-      name: 'custom-transform',
+      name: 'custom-transform-jquery',
       transform(code) {
         return code.replace(/\$\(/g, 'jQuery(');
+      },
     },
+    {
+      name: 'custom-transform-ajax',
+      transform(code) {
+        return code.replace(/\$\./g, 'jQuery.');
+      }
     },
     liveReload(__dirname + '/**/**.php'),
     ViteSassGlobImport(),

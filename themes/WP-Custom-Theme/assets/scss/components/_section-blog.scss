@@ -3,6 +3,10 @@
 //------------------------------------------------------------
 
 .section-blog {
+	position: relative;
+	
+	@include default-margin;
+
 	.section__head {
 		text-align: center;
 		margin-bottom: 50px;
@@ -12,9 +16,21 @@
 		}
 	}
 
-	.section__body {
+	.section__inner {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 30px;
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__actions {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
 	}
 }
+

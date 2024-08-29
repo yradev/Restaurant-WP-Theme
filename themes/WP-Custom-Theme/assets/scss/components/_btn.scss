@@ -10,7 +10,9 @@
 	text-transform: uppercase;
 	border: 2px solid $c-beige;
 	padding: 16px 60px;
+	position: relative;
 	transition: background-color $t-duration;
+	backdrop-filter: blur(3px);
 
 	@include responsive-down($r-tablet) {
 		padding: 10px 40px;
@@ -20,4 +22,8 @@
 		background-color: $c-beige;
 		opacity: 1;
 	}
+}
+
+.btn--small {
+	padding: 10px 32px;
 }

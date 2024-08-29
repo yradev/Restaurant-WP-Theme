@@ -4,10 +4,11 @@
         $content = get_field( 'ct_footer_content' , pll_current_language() );
         $socials = get_field ( 'ct_socials' , 'option' );
         $contacts = get_field ( 'ct_contacts' , pll_current_language() );
-        wp_footer();
     ?>
     
     <footer class="footer">
+        <?php wp_footer(); ?>
+        
         <div class="shell">
             <div class="footer__inner">
                 <div class="footer__content">

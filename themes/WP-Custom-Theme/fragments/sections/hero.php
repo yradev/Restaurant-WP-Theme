@@ -1,12 +1,29 @@
 <?php 
-	if( empty( $title ) ) {
+	if( empty( $title ) && ! is_home() && ! is_search() && ! is_single() ) {
 		return;
 	}
+
+	$hero_background = get_field( 'hero_bg' , 'option');
+
+	if ( is_home() ) {
+		$title = ct__('News' , 'ct');
+	}
+
+	if ( is_search() ) {
+		$title = ct__('Search Results for: ', 'ct') . '<span>' . get_search_query() . '</span>';
+	}
+
+	if ( is_single() ) {
+		$title = get_the_title();
+	}
 ?>
+
 <section class="hero" data-aos="fade-in">
-	<?php if( ! empty( $background_image ) )  
-		{
+	<?php 
+		if( ! empty( $background_image ) )  {
 			echo wp_get_attachment_image( $background_image , 'full', false, ['class' => 'hero__bg'] );
+		} else if( ! empty ( $hero_background ) ) {
+			echo wp_get_attachment_image( $hero_background , 'full', false, ['class' => 'hero__bg'] );
 		}
 	?>
 

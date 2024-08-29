@@ -3,15 +3,8 @@
 //------------------------------------------------------------
 
 .article-single {
-	.section__head {
-		text-align: center;
-		margin-bottom: 40px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
+	@include default_margin;
+	
 	.section__content {
 		margin-bottom: 40px;
 

@@ -17,14 +17,14 @@
 	.hero__inner {
 		position: relative;
 		z-index: 1;
-		min-height: 350px;
+		min-height: 300px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 100px 0 50px;
 
 		@include responsive-down($r-mobile) {
-			min-height: 300px;
+			min-height: 200px;
 		}
 	}
 }

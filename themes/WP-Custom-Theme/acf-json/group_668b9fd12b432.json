@@ -21,6 +21,31 @@
             "selected": 0
         },
         {
+            "key": "field_66ced556bf9cd",
+            "label": "Hero Background",
+            "name": "hero_bg",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
             "key": "field_668d4f6e8f1cc",
             "label": "Google Maps API Key",
             "name": "ct_google_maps_key",
@@ -197,5 +222,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724677027
+    "modified": 1724831087
 }
