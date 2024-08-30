@@ -1,4 +1,6 @@
 import Swiper from 'swiper/bundle';
+import $ from 'jquery';
+
 let slider = new Swiper('.js-slider-gallery .swiper', {
     loop: true,
 	slidesPerView: 1,

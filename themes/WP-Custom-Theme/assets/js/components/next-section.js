@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 /**
  * Set id to next section after init
  */

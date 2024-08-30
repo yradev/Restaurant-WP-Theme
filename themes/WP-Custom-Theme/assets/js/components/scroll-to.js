@@ -1,4 +1,5 @@
 import { $win, $header, $adminBar, hasFixedHeader } from '../utils/globals';
+import $ from 'jquery';
 
 /**
  * Check for # on load

@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const $body = $('body');
 const $win = $('window');
 const $navTrigger = $('.js-nav-trigger');

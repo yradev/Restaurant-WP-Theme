@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 function loadMoreHandler( event ) {
 	event.preventDefault();
 

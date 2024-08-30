@@ -1,4 +1,6 @@
 import Swiper from 'swiper/bundle';
+import $ from 'jquery';
+
 let slider = new Swiper('.js-hero-slider .swiper', {
     loop: true,
 	slidesPerView: 1,

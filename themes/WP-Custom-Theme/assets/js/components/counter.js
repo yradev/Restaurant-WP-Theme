@@ -1,4 +1,5 @@
 import counterUp from 'counterup2';
+import $ from 'jquery';
 
 const handleIntersection = (entries, observer) => {
 	entries.forEach(entry => {
