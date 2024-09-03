@@ -4,7 +4,7 @@
 
 .shape {
 	width: 212px;
-	height: 112px;
+	height: 114px;
 
 	@include responsive-down($r-tablet) {
 		width: 114px;

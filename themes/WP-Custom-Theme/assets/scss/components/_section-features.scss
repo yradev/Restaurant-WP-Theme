@@ -3,13 +3,25 @@
 //------------------------------------------------------------
 
 .section-features {
-	@include default-margin;
+	@include default-padding;
+	position: relative;
+	overflow: hidden;
 
 	.section__shape {
 		position: absolute;
 		right: -70px;
-		top: 0;
+		top: 100px;
 		transform: rotate(-135deg);
+
+		@include responsive-down($r-small-desktop) {
+			right: -90px;
+			top: 90px
+		}
+
+		@include responsive-down($r-tablet) {
+			top: 46px;
+			right: -46px;
+		}
 	}
 	.section__head {
 		text-align: center;
