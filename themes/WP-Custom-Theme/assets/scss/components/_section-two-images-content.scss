@@ -4,6 +4,8 @@
 
 .section-two-images-content {
 	@include default-padding;
+
+	overflow: hidden;
 	background-color: $c-dark-green-v2;
 
 	.section__inner {

@@ -6,6 +6,7 @@
 	@include default_margin();
 
 	position: relative;
+	overflow: hidden;
 
 	.section__inner {
 		display: flex;
