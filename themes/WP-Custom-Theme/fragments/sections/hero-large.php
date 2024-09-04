@@ -1,6 +1,15 @@
 <section class="hero-large js-hero-large">
+	<div class="hero__animations" style="<?php echo ! empty( $slides[0]['bar_color']) ? '--animation-color: ' . $slides[0]['bar_color'] : '' ?>">
+		<div class="hero__animation js-hero-animation"></div><!-- /.hero__animation-left -->
+		<div class="hero__animation hero__animation--right js-hero-animation-right"></div><!-- /.hero__animation-left -->
+		<div class="hero__animation hero__animation--top js-hero-animation-top"></div><!-- /.hero__animation-left -->
+		<div class="hero__animation hero__animation--bottom js-hero-animation-bottom"></div><!-- /.hero__animation-left -->
+	</div><!-- /.js-hero-animations -->
+
 	<?php if( ! empty( $slides ) ) :?>
-		<div class="hero-slider js-hero-slider">
+		<div class="hero-slider js-hero-slider hero__slider">
+			<div class="hero-slider__overlay js-hero-slider-overlay"></div><!-- /.hero-slider__overlay -->
+			
 			<div class="slider__clip swiper">
 				<div class="slider__slides swiper-wrapper">
 					<?php foreach( $slides as $slide ) :?>
@@ -19,7 +28,7 @@
 
 							<div class="shell">
 								<div class="slider__slide-inner">
-									<div class="slider__slide-content">
+									<div class="slider__slide-content js-slider-slide-content">
 										<?php if( ! empty( $slide['subtitle'] ) ) :?>
 											<strong><?php echo $slide['subtitle'] ?></strong>
 										<?php endif ?>
@@ -39,7 +48,7 @@
 										?>
 									</div><!-- /.slider__slide-content -->
 
-									<div class="slider__slide-images">
+									<div class="slider__slide-images js-slider-slide-images">
 										<?php if( ! empty( $slide['image_1'] ) && ! empty( $slide[ 'image_2' ] ) ) :?>
 										
 											<div class="shape slider__slide-images-shape">
@@ -67,22 +76,22 @@
 
 							</div><!-- /.shell -->
 
-							<div class="slider__slide-bar" style="--bar-color: <?php echo $slide['bar_color'] ?>"></div><!-- /.slider__bar -->
+							<div class="slider__slide-bar js-slider-bar" style="--bar-color: <?php echo $slide['bar_color'] ?>"></div><!-- /.slider__bar -->
 							
 						</div><!-- /.slider__slide -->
 					<?php endforeach ?>
 				</div><!-- /.slider__slides -->
 
 				<div class="slider__nav">
-					<div class="slider__arrow slider__nav-next js-slider-next"><i class="fa-solid fa-angle-left"></i></div>
-					<div class="slider__arrow slider__nav-prev js-slider-prev"><i class="fa-solid fa-angle-right"></i></div>
+					<div class="slider__arrow slider__nav-prev js-slider-prev"><i class="fa-solid fa-angle-left"></i></div>
+					<div class="slider__arrow slider__nav-next js-slider-next"><i class="fa-solid fa-angle-right"></i></div>
 				</div><!-- /.slider__nav -->
 
 			</div><!-- /.slider__clip -->
 		</div><!-- /.slider js-slider -->
 	<?php endif ?>
 
-		<a href="#first-section" class="hero__btn">
+		<a href="#first-section" class="hero__btn js-hero-next-section">
 			<i class="fa-solid fa-angles-down"></i>
 		</a>
 </section><!-- /.hero-large -->

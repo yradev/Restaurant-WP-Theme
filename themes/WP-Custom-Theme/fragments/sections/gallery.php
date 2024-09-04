@@ -25,7 +25,7 @@
 		</div><!-- /.slider__clip -->
 	</div><!-- /.slider js-slider -->
 	
-	<ul data-aos="fade-up">
+	<ul>
 		<?php foreach( $images as $key => $image ) :?>
 			<li>
 				<a href="#" class="js-slider-gallery-image" data-id="<?php echo $key ?>">

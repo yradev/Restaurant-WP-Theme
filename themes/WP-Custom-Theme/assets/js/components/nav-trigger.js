@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 const $body = $('body');
-const $win = $('window');
 const $navTrigger = $('.js-nav-trigger');
 const navTriggerActive = 'nav-trigger--active'
 const openMenuClass = 'has-open-menu';

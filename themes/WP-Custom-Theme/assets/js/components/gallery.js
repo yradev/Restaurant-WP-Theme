@@ -4,10 +4,6 @@ import $ from 'jquery';
 let slider = new Swiper('.js-slider-gallery .swiper', {
     loop: true,
 	slidesPerView: 1,
-	// autoplay: {
-    //     delay: 7000,
-    //     disableOnInteraction: false,
-    // },
     effect: "fade",
     fadeEffect: { crossFade: true },
     navigation: {

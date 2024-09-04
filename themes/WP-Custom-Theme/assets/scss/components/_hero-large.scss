@@ -3,6 +3,11 @@
 //------------------------------------------------------------
 
 .hero-large {
+	position: relative;
+	min-height: 100vh;
+	opacity: 0;
+	transition: opacity $t-duration;
+	
 	@keyframes bounce {
 		0% {
 			transform: translateY(0) translateX(-50%);
@@ -17,7 +22,6 @@
 		}
 	}
 
-	position: relative;
 
 	.hero__btn {
 		position: absolute;
@@ -27,4 +31,34 @@
 		font-size: 30px;
 		animation: bounce 2s infinite;
 	}
+
+	.hero__animations {
+		--animation-color: red;
+		pointer-events: none;
+	}
+
+	.hero__animation {
+		position: absolute;
+		width: 0;
+		height: 5px;
+		left: 0;
+		bottom: 0;
+		background-color: var(--animation-color);
+		opacity: 0;
+		z-index: 2;
+	}
+}
+
+body.is-loading-homepage .hero-large {
+	.hero__btn {
+		bottom: -50px;
+	}
+
+	.hero__animation {
+		opacity: 1;
+	}
+}
+
+body.is-loaded .hero-large {
+	opacity: 1;
 }

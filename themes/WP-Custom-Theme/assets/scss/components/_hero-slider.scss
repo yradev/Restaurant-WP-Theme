@@ -4,6 +4,20 @@
 
 .hero-slider {
 	--bar-color: #fff;
+	position: relative;
+	overflow: hidden;
+
+	.hero-slider__overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		background-color: $c-dark;
+		pointer-events: none;
+		opacity: 0;
+	}
 
 	.slider__slide {
 		overflow: hidden;
@@ -315,5 +329,35 @@
 		&:hover {
 			opacity: .7;
 		}
+	}
+}
+
+body.is-loading-homepage .hero-slider {
+	.slider__slide .slider__slide-bg {
+		animation-play-state: paused;
+	}
+
+	.slider__slide-bar {
+		width: 0;
+	}
+
+	.hero-slider__overlay {
+		opacity: 1;
+	}
+
+	.slider__slide-content {
+		transform: translateX(-200%);
+	}
+
+	.slider__slide-images {
+		scale: 0;
+	}
+	
+	.slider__nav-prev {
+		transform: translateX(-60px);
+	}
+
+	.slider__nav-next {
+		transform: translateX(60px);
 	}
 }

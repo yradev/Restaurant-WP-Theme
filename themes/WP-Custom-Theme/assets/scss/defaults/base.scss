@@ -152,3 +152,7 @@ iframe {
 		position: fixed;
 	}
 }
+
+body.has-open-menu {
+	overflow: hidden;
+}

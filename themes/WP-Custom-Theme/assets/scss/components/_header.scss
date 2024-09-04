@@ -11,7 +11,8 @@
 	top: 0;
 	left: 0;
 	background: linear-gradient(180deg, #000000 24.43%, rgba(11, 19, 21, 0) 100%);
-	transition: background-color 1s;
+	opacity: 0;
+	transition: background-color 1s, opacity $t-duration;
 	
 	@include responsive-down($r-tablet) {
 		padding: 20px 0;
@@ -46,8 +47,6 @@
 
 		}
 	}
-
-
 }
 
 body.has-open-menu .header {
@@ -68,4 +67,12 @@ body.admin-bar .header {
 	@include responsive-down($r-tablet) {
 		margin-top: 46px;
 	}
+}
+
+body.is-loading-homepage .header {
+	top: -200px;
+}
+
+body.is-loaded .header {
+	opacity: 1;
 }
