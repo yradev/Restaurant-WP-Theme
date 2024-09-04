@@ -36,9 +36,8 @@ function heroLargeAnimation() {
 	
 	timeline.to(sliderOverlay, {height: 0});
 	timeline.to(animation, {width: "100%"}, "<"); 
-	timeline.to(animation, {width: "77.7%"});
+	timeline.to(animation, {width: "50%"});
 	timeline.to(sliderContent, {x: 0}, "<");
-	timeline.to(animation, {width: "33.3%"});
 	timeline.to(sliderImages, {scale: 1}, "<");
 	timeline.to(animation, {width: "0"});
 	timeline.to( [sliderNext, sliderPrev], {x: 0}, "<" );
