@@ -1,9 +1,6 @@
 <section class="hero-large js-hero-large">
 	<div class="hero__animations" style="<?php echo ! empty( $slides[0]['bar_color']) ? '--animation-color: ' . $slides[0]['bar_color'] : '' ?>">
 		<div class="hero__animation js-hero-animation"></div><!-- /.hero__animation-left -->
-		<div class="hero__animation hero__animation--right js-hero-animation-right"></div><!-- /.hero__animation-left -->
-		<div class="hero__animation hero__animation--top js-hero-animation-top"></div><!-- /.hero__animation-left -->
-		<div class="hero__animation hero__animation--bottom js-hero-animation-bottom"></div><!-- /.hero__animation-left -->
 	</div><!-- /.js-hero-animations -->
 
 	<?php if( ! empty( $slides ) ) :?>

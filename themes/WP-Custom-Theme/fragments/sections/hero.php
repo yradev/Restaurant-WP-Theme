@@ -5,6 +5,7 @@
 
 	$hero_background = get_field( 'hero_bg' , 'option');
 
+
 	if ( is_home() ) {
 		$title = ct__('News' , 'News');
 	}

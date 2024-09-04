@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { $body, $header, $win, $doc } from '../utils/globals';
+import { $body, $header, $win, $doc, $main } from '../utils/globals';
 import { slider } from './hero-slider';
 
 const wrapper = '.js-hero-large';
@@ -49,7 +49,7 @@ function heroLargeAnimation() {
  * Start hero large animation on load
  */
 $win.on('load' , function() {
-	if( $doc.scrollTop() == 0 ) {
+	if( $doc.scrollTop() == 0 && $main.children().first().hasClass(wrapper.substring(1, wrapper.length))) {
 		heroLargeAnimation();
 	}
 })

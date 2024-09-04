@@ -17,8 +17,8 @@ function ct_e( $title, $content ) {
  */
 function ct__( $title, $content ) {
 	if (function_exists('pll_register_string')) {
-		pll__( $content );
-		ct_update_translation_db($title, $content);	
+		ct_update_translation_db($title, $content);
+		return pll__($content);
 	} else {
 		return __( $content, 'ct' );
 	}
