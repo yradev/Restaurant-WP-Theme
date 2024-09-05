@@ -22,7 +22,6 @@
 	.slider__slide {
 		overflow: hidden;
 		position: relative;
-		min-height: 100vh;
 
 		&:after {
 			content: '';
@@ -82,10 +81,6 @@
 
 		@include responsive-down($r-small-desktop) {
 			padding: 50px 10px;
-		}
-
-		@include responsive-down($r-tablet) {
-			min-height: 700px;
 		}
 
 		@include responsive-down($r-mobile) {

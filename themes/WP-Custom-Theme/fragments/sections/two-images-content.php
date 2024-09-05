@@ -1,7 +1,7 @@
-<section class="section-two-images-content" data-aos="fade-up">
+<section class="section-two-images-content js-two-images-content">
 	<div class="shell">
 		<div class="section__inner">
-			<div class="section__images">
+			<div class="section__images js-images">
 				<?php 
 					if( ! empty( $image_1 ) ) {
 						echo wp_get_attachment_image( $image_1 , 'full' );
@@ -13,7 +13,7 @@
 				?>					
 			</div><!-- /.section__images -->
 
-			<div class="section__content" data-aos="fade-left">
+			<div class="section__content js-content">
 				<?php if( ! empty( $subtitle ) ) :?>
 					<div class="section__subtitle">
 						<p><?php echo $subtitle ?></p>

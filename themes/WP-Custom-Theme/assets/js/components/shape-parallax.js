@@ -5,8 +5,8 @@ import { $win } from '../utils/globals';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const section = '.js-shape-parallax'
-const $sections = $(section);
+const sectionName = '.js-shape-parallax'
+const $sections = $(sectionName);
 
 /**
  * Left and right shape parallax
@@ -30,5 +30,5 @@ function shapeParallax() {
 
 $win.on('load', function() {
 	shapeParallax();
-})
+});
 

@@ -3,14 +3,17 @@
 //------------------------------------------------------------
 
 .section-two-images-content {
-	@include default-padding;
-
 	overflow: hidden;
 	background-color: $c-dark-green-v2;
 
 	.section__inner {
+		@include default-padding;
+
 		display: flex;
 		flex-wrap: wrap;
+		min-height: 100vh;
+		align-items: center;
+		justify-content: center;
 	}
 	
 	.section__images {
