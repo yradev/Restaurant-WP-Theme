@@ -4,6 +4,20 @@
 
 .section-cards {
 	@include default_margin();
+	position: relative;
+	display: flex;
+
+	.section__shape {
+		position: absolute;
+		left: 0;
+		top: 10%;
+	}
+
+	.section__shape-right {
+		position: absolute;
+		right: 0;
+		top: 10%;
+	}
 
 	.section__head {
 		margin-bottom: 70px;

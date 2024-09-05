@@ -15,32 +15,42 @@
 	$items = new WP_Query( $args );
  ?>
 
-<section class="section-cards" data-aos="fade-in">
+<section class="section-cards shape-paralax js-shape-parallax">
+	<div class="shape section__shape js-shape-left">
+		<?php ct_include_fragment( 'svgs/shape', [] ) ?>
+	</div><!-- /.shape -->
+
+	<div class="shape section__shape-right js-shape-right">
+		<?php ct_include_fragment( 'svgs/shape', [] ) ?>
+	</div><!-- /.shape -->
+
 	<div class="shell">
-		<div class="section__head">
-			<?php if( ! empty( $subtitle ) ) :?>
-				<p><?php echo $subtitle ?></p>
+		<div class="section__inner">
+			<div class="section__head">
+				<?php if( ! empty( $subtitle ) ) :?>
+					<p><?php echo $subtitle ?></p>
+				<?php endif ?>
+
+				<?php if( ! empty( $title ) ) :?>
+					<h2><?php echo $title ?></h2>
+				<?php endif ?>
+			</div><!-- /.section__head -->
+
+			<?php if( ! empty( $specials ) ) :?>
+				<div class="section__cards">
+					<?php while( $items->have_posts() ) : $items->the_post() ?>	
+						<div class="section__card">
+							<?php the_post_thumbnail(); ?>
+
+							<h3><?php the_title(); ?></h3>
+
+							<?php if( ! empty( get_field( 'special_price' ) ) ) :?>
+								<p><?php echo get_field( 'special_price' ) . ' ' . get_field( 'ct_default_currency' , pll_current_language() ) ?></p>
+							<?php endif ?>
+						</div><!-- /.section__card -->
+					<?php endwhile; wp_reset_postdata(); ?>
+				</div><!-- /.section__cards -->
 			<?php endif ?>
-
-			<?php if( ! empty( $title ) ) :?>
-				<h2><?php echo $title ?></h2>
-			<?php endif ?>
-		</div><!-- /.section__head -->
-
-		<?php if( ! empty( $specials ) ) :?>
-			<div class="section__cards">
-				<?php while( $items->have_posts() ) : $items->the_post() ?>	
-					<div class="section__card">
-						<?php the_post_thumbnail(); ?>
-
-						<h3><?php the_title(); ?></h3>
-
-						<?php if( ! empty( get_field( 'special_price' ) ) ) :?>
-							<p><?php echo get_field( 'special_price' ) . ' ' . get_field( 'ct_default_currency' , pll_current_language() ) ?></p>
-						<?php endif ?>
-					</div><!-- /.section__card -->
-				<?php endwhile; wp_reset_postdata(); ?>
-			</div><!-- /.section__cards -->
-		<?php endif ?>
+		</div><!-- /.section__inner -->
 	</div><!-- /.shell -->
 </section><!-- /.section-cards -->

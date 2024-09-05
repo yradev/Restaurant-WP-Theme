@@ -1,21 +1,22 @@
 import gsap from 'gsap';
+import $ from 'jquery';
 import { $body, $header, $win, $doc, $main } from '../utils/globals';
 import { slider } from './hero-slider';
 
 const wrapper = '.js-hero-large';
+const $wrapper = $(wrapper);
 
 /**
  * Hero large animation
  */
 function heroLargeAnimation() {
-	const animation = wrapper + ' .js-hero-animation';
-	const nextSectionButton = wrapper + ' .js-hero-next-section';
-	const sliderContainer = wrapper + ' .js-hero-slider';
-	const sliderOverlay = sliderContainer + ' .js-hero-slider-overlay';
-	const sliderContent = sliderContainer + ' .js-slider-slide-content';
-	const sliderImages = sliderContainer + ' .js-slider-slide-images';
-	const sliderNext = sliderContainer + ' .js-slider-next';
-	const sliderPrev = sliderContainer + ' .js-slider-prev';
+	const animation = $wrapper.find('.js-hero-animation')[0];
+	const nextSectionButton = $wrapper.find('.js-hero-next-section')[0];
+	const sliderOverlay = $wrapper.find('.js-hero-slider-overlay')[0];
+	const sliderContent = $wrapper.find('.js-slider-slide-content')[0];
+	const sliderImages = $wrapper.find('.js-slider-slide-images')[0];
+	const sliderNext =  $wrapper.find('.js-slider-next')[0];
+	const sliderPrev = $wrapper.find('.js-slider-prev')[0];
 	const animationDuration = 0.8;
 	const timeline = gsap.timeline(
 		{
