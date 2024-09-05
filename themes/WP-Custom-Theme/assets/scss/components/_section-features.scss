@@ -3,9 +3,18 @@
 //------------------------------------------------------------
 
 .section-features {
-	@include default-padding;
 	position: relative;
 	overflow: hidden;
+	@include default-margin;
+
+	.section__inner {
+
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
 	.section__shape {
 		position: absolute;

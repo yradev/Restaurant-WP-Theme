@@ -67,8 +67,9 @@ export function scrollToElement(element) {
 	const $element = $(element);
 	const scrollDuration = 700;
 	const elementTop = $element.first().offset().top;
+
 	const elementMarginTop = parseInt($element.css('margin-top'));
-	const headerHeight = hasFixedHeader && $header.length > 0 ? $header.innerHeight() : 0;
+	const headerHeight = ! hasFixedHeader && $header.length > 0 ? $header.innerHeight() : 0;
 	const adminBarHeight =  $adminBar.length > 0 ? $adminBar.innerHeight() : 0;
 
 	let scrollTop = elementTop - elementMarginTop - headerHeight - adminBarHeight;
