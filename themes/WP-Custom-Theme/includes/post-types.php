@@ -18,6 +18,22 @@ function create_post_type() {
             'taxonomies'  => ['ct_item_category']
         ]
     );
+
+    register_post_type( 
+        'ct_feedback',
+        [
+            'labels' => ct_get_posttype_labels( 'Feedback' , 'Feedbacks'),
+            'public' => true,
+            'exclude_from_search' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'items'),
+            'show_in_rest' => false,
+            'show_ui'           => true,
+			'menu_icon' => 'dashicons-category',
+            'supports' => [ 'title', 'excerpt', 'thumbnail', 'editor' ],
+            'taxonomies'  => ['ct_item_category']
+        ]
+    );
 }
 
 

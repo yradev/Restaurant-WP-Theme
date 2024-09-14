@@ -142,7 +142,6 @@
 									<?php endif ?>
 								</header><!-- /.menu-page__head -->
 
-								
 								<div class="menu-page__pagination">
 									<a href="#" class="menu-page__pagination-next js-menu-next"><?php ct_e('Open', 'Open') ?> <i class="fa-solid fa-angles-right"></i></a>
 								</div><!-- /.menu-page__pagination -->
