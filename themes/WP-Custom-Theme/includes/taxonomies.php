@@ -29,7 +29,7 @@ function ct_register_taxonomies() {
  */
 
  function ct_get_category_labels( $name , $names ) {
-	$labels = [
+	return [
 		'name'              => ct__( 'Name', $name ),
 		'singular_name'     => ct__( 'Singular name', $name ),
 		'search_items'      => ct__( 'Search items', 'Search ' . $names ),

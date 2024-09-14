@@ -26,7 +26,7 @@ function create_post_type() {
  */
 
  function ct_get_posttype_labels( $name , $names ) {
-	$labels = [
+	return [
 		'name'                => ct__( 'Name', $name),
         'singular_name'       => ct__( 'Singular name', $name ),
         'menu_name'           => ct__( 'Menu name', $name ),

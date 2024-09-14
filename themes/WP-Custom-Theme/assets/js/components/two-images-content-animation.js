@@ -37,10 +37,18 @@ function twoImagesContentAnimation() {
 			.addLabel('Start');
 
 		$images.each( (i, element) => {
-			timeline
-				.addLabel('Image' + i)
-					.fromTo(element, {opacity: 0, width: "5%"}, {opacity: 1, width:"100%"}
+			if( i==0 ) {
+				timeline
+					.addLabel('Image' + i)
+						.fromTo(element, {width: "15%"}, {width:"100%"}
 				);
+			} else {
+				timeline
+					.addLabel('Image' + i)
+						.fromTo(element, {opacity: 0, width: "10%"}, {opacity: 1, width:"100%"}
+				);
+			}
+
 		});
 
 		timeline
