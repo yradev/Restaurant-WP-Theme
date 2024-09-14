@@ -1,0 +1,44 @@
+//------------------------------------------------------------ 
+//	Menus
+//------------------------------------------------------------
+
+.menus {
+	min-height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@include responsive-down($r-tablet) {
+		min-height: 700px;
+	}
+
+	.menus__inner {
+		position: relative;
+		width: 100%;
+		height: 750px;
+
+		@media(max-width: 1500px) {
+			height: 720px;
+		}
+
+		@include responsive-down($r-small-desktop) {
+			height: 700px;
+		}
+
+		@include responsive-down($r-tablet) {
+			height: 620px;
+		}
+	}
+
+	.menus__back {
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		transform-origin: 0 0;
+	}
+}
