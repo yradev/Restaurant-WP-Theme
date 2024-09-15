@@ -145,18 +145,22 @@ function dublicateMenuPages() {
 
 		if( ! $element.hasClass('menu-page--front') ) {
 			const $clonedPage = $element.clone(true);
-			const $frontPage = $element.find('.js-page-front')
+			const $frontPage = $element.find('.js-page-front');
+			const $backPage = $element.find('.js-page-back');
+			const $prevButton = $backPage.find('.js-menu-prev').clone(true);
+			const $nextButton = $frontPage.find('.js-menu-next').clone(true);
+
+			$frontPage
+				.find('.js-menu-pagination')
+				.append($prevButton);
 
 			$frontPage.addClass('is-active');
-			const $prevButton = $element.find('.js-menu-pagination .js-menu-prev');
 
-			$frontPage.find('.js-menu-pagination').append($prevButton);
-
-			$clonedPage.find('.js-page-back').addClass('is-active');
-
-			const $nextButton = $clonedPage.find('.js-menu-pagination .js-menu-next');
-
-			$clonedPage.find('.js-menu-pagination').append($nextButton);
+			$clonedPage
+				.find('.js-page-back')
+				.addClass('is-active')
+				.find('.js-menu-pagination')
+				.append($nextButton);
 
 			$element.before($clonedPage);
 		}
