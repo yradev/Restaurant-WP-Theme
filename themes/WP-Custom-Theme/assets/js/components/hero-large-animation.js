@@ -36,11 +36,11 @@ function heroLargeAnimation() {
 	$body.addClass('is-loading-homepage');
 	
 	timeline.to(sliderOverlay, {height: 0});
-	timeline.to(animation, {width: "100%"}, "<"); 
-	timeline.to(animation, {width: "50%"});
+	timeline.to(animation, {width: "100%"}, '<'); 
+	timeline.to(animation, {width: "0"});
 	timeline.to(sliderContent, {x: 0}, "<");
 	timeline.to(sliderImages, {scale: 1}, "<");
-	timeline.to(animation, {width: "0"});
+	timeline.to(animation, {width: "0"}, "<");
 	timeline.to( [sliderNext, sliderPrev], {x: 0}, "<" );
 	timeline.to( nextSectionButton, {bottom: 0}, "<");
 	timeline.to( $header[0], {top: 0}, "<");
