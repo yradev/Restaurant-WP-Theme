@@ -10,3 +10,4 @@ include_once( __DIR__ . '/includes/helpers.php' );
 include_once( __DIR__ . '/includes/menus.php' );
 include_once( __DIR__ . '/includes/plugins/acf.php' );
 include_once( __DIR__ . '/includes/plugins/polylang.php' );
+include_once( __DIR__ . '/includes/plugins/forminator.php' );

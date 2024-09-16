@@ -29,7 +29,7 @@ function create_post_type() {
             'rewrite' => array('slug' => 'items'),
             'show_in_rest' => false,
             'show_ui'           => true,
-			'menu_icon' => 'dashicons-category',
+			'menu_icon' => 'dashicons-testimonial',
             'supports' => [ 'title', 'excerpt', 'thumbnail', 'editor' ],
             'taxonomies'  => ['ct_item_category']
         ]
