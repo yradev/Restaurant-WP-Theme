@@ -25,14 +25,15 @@
 	}
 
 	.forminator-input,
-	.forminator-textarea {
+	.forminator-textarea,
+	.forminator-select2 {
 		width: 100%;
 		height: 50px;
 		padding: 14px;
 		font-size: 14px;
 		line-height: 1;
-		color: $c-white;
 		background-color: transparent;
+		color: $c-white;
 		border: 1px solid $c-white;
 
 		@include responsive-down($r-tablet) {
@@ -43,6 +44,14 @@
 			opacity: 1;
 			color: $c-white;
 			font-size: 14px;
+		}
+	}
+
+	.forminator-select2 option {
+		color: $c-black;
+
+		&:first-child {
+			display: none;
 		}
 	}
 
