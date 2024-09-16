@@ -30,6 +30,27 @@
 	}
 }
 
+@mixin default-margin-top {
+	margin-top: $margin-desktop;
+
+	@include responsive-down($r-large-desktop) {
+		margin-top: $margin-large-desktop;
+	}
+
+	@include responsive-down($r-small-desktop) {
+		margin-top: $margin-small-desktop;
+	}
+	
+	@include responsive-down($r-tablet) {
+		margin-top: $margin-tablet;
+	}
+
+	@include responsive-down($r-mobile) {
+		margin-top: $margin-mobile;
+	}
+}
+
+
 @mixin default-padding {
 	padding: $padding-desktop 0;
 

@@ -7,7 +7,7 @@ $win.on('load resize', function() {
         slide: '.js-testimonial',
         width: 400,
         spaceBetween: 50,
-        duration: 80,
+        duration: 60,
         breakpoints: [
             {
                 breakpoint: 767,

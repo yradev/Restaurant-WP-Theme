@@ -1,0 +1,53 @@
+//------------------------------------------------------------ 
+//	Section news
+//------------------------------------------------------------
+
+.section-news {
+	@include default-margin-top;
+
+	.section__head {
+		text-align: center;
+		margin-bottom: 70px;
+
+		@include responsive-down($r-large-desktop) {
+			margin-bottom: 40px;
+		}
+
+		@include responsive-down($r-tablet) {
+			margin-bottom: 30px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__head p {
+		font-family: $ff-alt;
+		font-size: 36px;
+		line-height: 1.19444;
+		color: $c-beige;
+		margin-bottom: 10px;
+
+		@include responsive-down($r-mobile) {
+			margin-bottom: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section__content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+		@include responsive-down($r-small-desktop) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include responsive-down($r-mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+}

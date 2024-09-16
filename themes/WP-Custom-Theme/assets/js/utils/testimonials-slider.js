@@ -40,8 +40,6 @@ export default function slider( args ) {
         breakpoints.forEach( breakpoint => {
             const breakpointWidth = breakpoint?.breakpoint;
 
-            console.log(breakpointWidth);
-
             if(breakpointWidth != undefined && $(window).width() <= breakpointWidth) { 
                 if( breakpoint.width !== undefined ) {
                     slideWidth = breakpoint.width;

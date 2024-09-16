@@ -91,7 +91,6 @@ function onTabletMenusAnimationNext(event) {
 function onTabletMenusAnimationPrev(event) {
 	event.preventDefault();
 
-	console.log('catched');
 	let $page = $(event.target).closest('.js-menu');
 	let front = $page.find('.js-page-front')[0];
 	let back = $page.find('.js-page-back')[0];

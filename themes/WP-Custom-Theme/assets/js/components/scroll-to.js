@@ -63,7 +63,6 @@ $('a[href*="#"]:not([href="#"])').on('click', function(event) {
  * Smooth scroll to element
  */
 export function scrollToElement(element) {
-
 	const $element = $(element);
 	const scrollDuration = 700;
 	const elementTop = $element.first().offset().top;
