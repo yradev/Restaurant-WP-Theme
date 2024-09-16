@@ -9,7 +9,7 @@
 
 <?php ct_include_fragment( 'sections/hero' , [] ) ?>
 
-<section class="section-blog have-top-article js-posts"  data-aos="fade-up">
+<section class="section-blog have-top-article js-posts" >
     <div class="shell">
         <div class="section__inner js-posts-list">
             <?php if (have_posts()) : ?>

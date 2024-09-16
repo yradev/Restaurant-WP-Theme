@@ -2,7 +2,7 @@
 	$contacts = get_field( 'ct_contacts' , pll_current_language() );
 ?>
 
-<section class="section-contacts" id="<?php echo $anchor ?>"  data-aos="fade-in">
+<section class="section-contacts" id="<?php echo $anchor ?>" >
 	<?php if( ! empty( $background_image ) ) {
 			echo wp_get_attachment_image( $background_image , 'full', false, ['class' => 'section__bg'] );
 		}

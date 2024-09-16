@@ -5,7 +5,7 @@
 	
 	<div class="shell">
 		<div class="section__inner">
-		<header class="section__head js-features-head" data-aos="fade-in">
+		<header class="section__head js-features-head">
 			<?php if( ! empty( $subtitle ) ) :?>
 				<p><?php echo $subtitle ?></p>
 			<?php endif ?>

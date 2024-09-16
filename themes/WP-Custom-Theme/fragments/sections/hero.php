@@ -19,7 +19,7 @@
 	}
 ?>
 
-<section class="hero" data-aos="fade-in">
+<section class="hero">
 	<?php 
 		if( ! empty( $background_image ) )  {
 			echo wp_get_attachment_image( $background_image , 'full', false, ['class' => 'hero__bg'] );

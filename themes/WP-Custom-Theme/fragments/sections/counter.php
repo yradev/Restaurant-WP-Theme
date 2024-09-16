@@ -3,7 +3,7 @@
 		return;
 	}
 ?>
-<section class="section-counter js-counter-section" data-aos="fade-up">
+<section class="section-counter js-counter-section">
 	<?php 
 		if( ! empty( $background_image ) ) {
 			echo wp_get_attachment_image( $background_image , 'full', false, ['class' => 'section__bg'] );
