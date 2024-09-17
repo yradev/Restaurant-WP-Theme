@@ -14,8 +14,8 @@
  * Add enqueues from dist folder to WP
  */
 function add_enqueues_from_dist() {
-	$manifest_path =  get_template_directory() . DIST_PATH . MANIFEST_PATH;
-	$template_dist_path = get_template_directory_uri() . DIST_PATH;
+	$manifest_path =  get_template_directory() . '/dist/.vite/manifest.json';
+	$template_dist_path = get_template_directory_uri() . '/dist/';
 
 	if( file_exists($manifest_path) ) {	
 		$manifests = json_decode( file_get_contents( $manifest_path ), true );

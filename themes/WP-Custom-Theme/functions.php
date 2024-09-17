@@ -1,4 +1,5 @@
 <?php
+include_once( __DIR__ . '/includes/mail.php' );
 include_once( __DIR__ . '/includes/defaults.php' );
 include_once( __DIR__ . '/includes/SEO.php' );
 include_once( __DIR__ . '/includes/post-types.php' );
