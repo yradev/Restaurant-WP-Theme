@@ -10,12 +10,12 @@ add_filter('wp_mail_from', function($email) {
 /**
  * Update smtp server credentials
  */
-function my_phpmailer_example( $phpmailer ) {
+function ct_phpmail_override( $phpmailer ) {
     $phpmailer->isSMTP();     
     $phpmailer->Host = SMTP_SERVER;
-    $phpmailer->SMTPAuth = SMTP_AUTH; // Ask it to use authenticate using the Username and Password properties
+    $phpmailer->SMTPAuth = SMTP_AUTH; 
     $phpmailer->Port = SMTP_PORT;
     $phpmailer->Username = SMTP_SERVER;
     $phpmailer->Password = SMTP_PORT;
 }
-add_action( 'phpmailer_init', 'my_phpmailer_example' );
+add_action( 'phpmailer_init', 'ct_phpmail_override' );
