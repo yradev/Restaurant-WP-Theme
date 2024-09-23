@@ -13,7 +13,7 @@ We have set up a preview environment that can be accessed at:
 ## Features
 
 - Responsive design for mobile and tablet.
-- Landing page with multiple animations
+- Landing page with multiple animations.
 - Animated menu with categories and items.
 - Contact form with functionalities of contact, reservation and feedback.
 - Image gallery.
