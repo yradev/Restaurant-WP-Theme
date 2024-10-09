@@ -1,0 +1,47 @@
+:root {
+	--moving-pixels: -500px;
+	--start-pixels: 0;
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(var(--moving-pixels));
+	}
+}
+
+@keyframes marquee-end {
+	from {
+		transform: translateX(var(--start-pixels));
+	}
+
+	to {
+		transform: translateX(var(--moving-pixels));
+	}
+}
+
+.marquee {
+	--container-width: 2000px;
+	--slide-width: 500px;
+	--gap: 20px;
+	--slides-count: 7
+	--duration: 5s;
+
+	width: var(--container-width);
+	display: grid;
+	grid-template-columns: repeat(var(--slides-count), var(--slide-width));
+	gap: var(--gap);
+	animation: marquee var(--duration) linear infinite;
+
+	&:hover {
+		animation-play-state: paused;
+	}
+}
+
+// Marquee starts from right
+.marquee--right {
+	animation: marquee-end var(--first-animation-duration) linear, marquee var(--duration) linear var(--first-animation-duration) infinite;
+}

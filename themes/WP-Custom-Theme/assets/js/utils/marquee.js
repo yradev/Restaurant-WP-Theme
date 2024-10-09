@@ -1,25 +1,29 @@
 import $ from 'jquery';
+import { $win } from './globals';
 
-const wrapperName = 'testimonials-slider';
+const wrapperName = 'marquee';
 let container = 1;
 let slide;
 let slideWidth;
 let gap;
 let duration;
+let reverseStart;
 let slidesCount;
 let containerWidth = 0;
 let visibleElementsCount;
 let $container = $('');
 let breakpoints = {};
+let $clones = [];
 
 /**
- * Infinity slider with functionalities to stop on hover
+ * Marquee with functionalities to stop on hover
  * 
  * @argument container - slider's container
  * @argument slide - slide container
  * @argument width - slide width
  * @argument spaceBetween - space between
- * @argument duration - duration of one cicle
+ * @argument duration - duration of one cicle (depends on slides)
+ * @argument reverseStart - marquee will start from the right
  * @argument breakpoints - Array with objects of breakpoints
  * * @argument breakpoint - The breakpoint width
  * * @argument width - slide width
@@ -27,15 +31,15 @@ let breakpoints = {};
  * * @argument duration - spaceBetween
  */
 
-export default function slider( args ) {
+export default function marquee( args ) {
 	container = args?.container ?? '';
 	slide = args?.slide ?? '';
 	slideWidth = args?.width ?? 0;
 	gap = args?.spaceBetween ?? 0;
 	duration = args?.duration ?? 0;
+	reverseStart = args?.reverseStart ?? false;
 	breakpoints = args?.breakpoints ?? 0;
-
-
+	
     if( breakpoints.length > 0 ) {
         breakpoints.forEach( breakpoint => {
             const breakpointWidth = breakpoint?.breakpoint;
@@ -70,15 +74,49 @@ export default function slider( args ) {
  */
 
 function appendDublicates() {
-    slidesCount = $container.find(slide).length;
+	cleanUpClones();
+
+	const $slides = $container.find(slide);
+    slidesCount = $slides.length;
+
+    containerWidth = slidesCount * slideWidth + ( slidesCount * gap );
+
+	if( containerWidth < $win.width() * 2) {
+		const $clonesNumber = Math.round((($win.width() * 2) / containerWidth));
+		
+		for( let i = 1; i<=$clonesNumber; i++ ) {
+			const $clonedSlides = $slides.slice(0, $slides.length).clone(true);
+
+			$clones.push($clonedSlides);
+
+			$container.append($clonedSlides);
+		}
+
+		slidesCount = $container.find(slide).length;
+		containerWidth = slidesCount * slideWidth + ( slidesCount * gap );
+	} else {
+		containerWidth = slidesCount * slideWidth + ( slidesCount * gap );
+	}
+
     visibleElementsCount = Math.ceil($(window).width() / slideWidth);
-    const $clonedSlides = $(slide).slice(0, visibleElementsCount).clone();
+    const $clonedSlides = $container.find(slide).slice(0, visibleElementsCount).clone(true);
    
+	$clones.push($clonedSlides);
+
     slidesCount += visibleElementsCount;
 
     $container.css('--slides-count' , slidesCount);
 
     $container.append($clonedSlides);
+}
+
+/**
+ * Cleanup clones on resize
+ */
+function cleanUpClones() {
+	$clones.forEach( (clones, index) => {
+		clones.remove();
+	} )
 }
   
 /**
@@ -87,8 +125,6 @@ function appendDublicates() {
 function addBaseStyles() {
 	const $container = $(container);
 	$container.addClass(wrapperName);
-
-    containerWidth = slidesCount * slideWidth + ( slidesCount - 1 ) * gap;
 
     $container.css('--container-width' , containerWidth + 'px');
     $container.css('--slide-width', slideWidth + 'px');
@@ -101,8 +137,20 @@ function addBaseStyles() {
  */
 function startAnimation(){
     let movingPixels = containerWidth - $(window).width();
-    let visibleElementHiddenWidth = ( visibleElementsCount * slideWidth + visibleElementsCount * (gap - 1) ) - $(window).width() - 15;
+    let visibleElementHiddenWidth = ( visibleElementsCount * slideWidth + visibleElementsCount * (gap - 1) ) - $(window).width();
     movingPixels -= visibleElementHiddenWidth;
+	movingPixels -= visibleElementsCount;
+
+
+	if( reverseStart ) {
+
+		const pixelsPerSecond = movingPixels / duration;
+		const durationFirstAnimation =  ($win.width() + movingPixels) / pixelsPerSecond ;
+
+		$container.css('--start-pixels' , $win.width() + 'px');
+		$container.css('--first-animation-duration' , durationFirstAnimation + 's');
+		$container.addClass('marquee--right');
+	}
 
     $container.css('--moving-pixels' , '-' + movingPixels + 'px');
 }

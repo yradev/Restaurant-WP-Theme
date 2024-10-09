@@ -1,8 +1,8 @@
-import slider from '../utils/testimonials-slider'
+import marquee from '../utils/marquee'
 import {$win} from '../utils/globals'
 
 $win.on('load resize', function() {
-    slider({
+    marquee({
         container: '.js-testimonials',
         slide: '.js-testimonial',
         width: 400,
