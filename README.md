@@ -2,14 +2,6 @@
 
 Custom wordpress theme for restaurants.
 
-## Preview
-
-We have set up a preview environment that can be accessed at:
-
-- URL: https://antimovski-han.flywheelsites.com/
-- username: admin
-- password: 123456  
-
 ## Features
 
 - Responsive design.
